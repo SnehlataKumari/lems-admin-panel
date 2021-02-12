@@ -1,0 +1,395 @@
+<app-header></app-header>
+<app-sidebar></app-sidebar>
+<div id="productPage"></div>
+<div class="content-page">
+    <div class="content">
+        
+        <!-- Start Content-->
+        <div class="container-fluid">
+            <div class="row page-title mt-2 d-print-none">
+                <div class="col-md-12">
+                    <nav aria-label="breadcrumb" class="float-right mt-1">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a class="fw-600">Product</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Add Course</li>
+                        </ol>
+                    </nav>
+                    <h4 class="mb-1 mt-0">Add Course</h4>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <div id="smartwizard-arrows" class="sw-main sm-product sw-theme-arrows">
+                        <ul class="nav nav-tabs step-anchor">
+                            <li class="nav-item active"><a routerLink="/product/{{productId}}/add-product" class="nav-link">Create Product<small class="d-block">Step 1</small></a></li>
+                            <li class="nav-item active"><a routerLink="/product/{{productId}}/decide-cost"  class="nav-link white">Decide the Cost<small class="d-block">Step 2</small></a></li>
+                            <li class="nav-item active"><a routerLink="/product/{{productId}}/add-course"  class="nav-link white">Add Course<small class="d-block">Step 3</small></a></li>
+                            <li class="nav-item"><a routerLink="/product/{{productId}}/product-publish"  class="nav-link white">Publish<small class="d-block">Step 4</small></a></li>
+                        </ul>
+                        <div class="m-t-40 row">
+                            
+                            <div class="col-md-11 mx-auto">
+                                <div class="text-right mb-4 ">
+                                    <button type="button" class="btn btn-success btn-rounded mb-3 mb-sm-0">
+                                        <i class="uil-plus mr-1"></i> Add New Section
+                                    </button>
+                                </div>
+                                <div class="card">
+                                    <div class="add-course-all">
+                                            <div class="row">
+                                                <div class="col-md-4 col-lg-4 col-12">
+                                                    <div class="dropdown d-inline">
+                                                        <a class="font-weight-bold dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                            <i class="uil uil-ellipsis-v font-size-14 align-middle"></i>
+                                                        </a>
+                                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(0px, 19px, 0px);">
+                                                            <a class="dropdown-item pointer" draggable="false"><i class="uil uil-edit-alt mr-2"></i>Edit</a>
+                                                            <div class="dropdown-divider"></div>
+                                                            <a  class="dropdown-item text-danger pointer" draggable="false"><i class="uil uil-trash mr-2"></i>Delete</a>
+                                                        </div>
+                                                    </div>
+                                                    <label class="font-weight-bold d-inline mr-2 ml-2">Part 1 </label>
+                                                </div>  
+                                                 <div class="col-md-7 col-lg-7 col-12">
+                                                       <div class="text-right">
+                                                            <button type="button" class="btn btn-soft-success btn-sm mr-2">Demo 1</button>
+                                                            <button type="button" class="btn btn-soft-success btn-sm">Demo 2</button>
+                                                       </div>
+                                                 </div> 
+                                                 <div class="col-md-1 col-lg-1">
+                                                        <div class="text-right">
+                                                            <i class="uil uil-angle-up font-size-18"></i>
+                                                        </div>
+                                                 </div> 
+                                            </div>
+                                    </div>
+                                   
+                                </div>
+                                <div class="card">
+                                    <div class="under-course">
+                                        <div class="row">
+                                              <div class="col-md-6">
+                                                  <div class="form-group">
+                                                       <label> Select Test </label>
+                                                       <select class="form-control">
+                                                           <option>choose</option>
+                                                           <option>choose</option>
+                                                           <option>choose</option>
+                                                           <option>choose</option>
+                                                       </select>
+                                                  </div>
+                                               </div>
+                                               <div class="col-md-6">
+                                                   <div class="form-group">
+                                                        <label> Select Topic </label>
+                                                        <select class="form-control">
+                                                            <option>choose</option>
+                                                            <option>choose</option>
+                                                            <option>choose</option>
+                                                            <option>choose</option>
+                                                        </select>
+                                                   </div>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                       <label>Section Name</label>
+                                                       <input type="text" class="form-control">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12">
+                                                     <div class="form-group text-center">
+                                                        <button class="btn btn-success" >Save </button>
+                                                     </div>
+                                                </div>
+                                        </div>
+                                   </div>
+                                </div>
+                                <div class="card">
+                                    <div class="add-course-all">
+                                            <div class="row">
+                                                <div class="col-md-4 col-lg-4 col-12">
+                                                    <div class="dropdown d-inline">
+                                                        <a class="font-weight-bold dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                            <i class="uil uil-ellipsis-v font-size-14 align-middle"></i>
+                                                        </a>
+                                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(0px, 19px, 0px);">
+                                                            <a class="dropdown-item pointer" draggable="false"><i class="uil uil-edit-alt mr-2"></i>Edit</a>
+                                                            <div class="dropdown-divider"></div>
+                                                            <a  class="dropdown-item text-danger pointer" draggable="false"><i class="uil uil-trash mr-2"></i>Delete</a>
+                                                        </div>
+                                                    </div>
+                                                    <label class="font-weight-bold d-inline mr-2 ml-2">Unit 3 </label>
+                                                </div>  
+                                                 <div class="col-md-7 col-lg-7 col-12">
+                                                       <div class="text-right">
+                                                            <button type="button" class="btn btn-soft-success btn-sm mr-2">Demo 1</button>
+                                                            <button type="button" class="btn btn-soft-success btn-sm">Demo 2</button>
+                                                       </div>
+                                                 </div> 
+                                                 <div class="col-md-1 col-lg-1">
+                                                        <div class="text-right">
+                                                            <i class="uil uil-angle-down font-size-18"></i>
+                                                        </div>
+                                                 </div> 
+                                            </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-12 mx-auto">
+                                    <div class="card">
+                                        <div class="add-course-all">
+                                            <div class="row">
+                                                <div class="col-md-12 col-lg-12 col-12">
+                                                    <div class="dropdown d-inline">
+                                                        <a class="font-weight-bold dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                            <i class="uil uil-ellipsis-v font-size-14 align-middle"></i>
+                                                        </a>
+                                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(0px, 19px, 0px);">
+                                                            <a class="dropdown-item pointer" draggable="false"><i class="uil uil-edit-alt mr-2"></i>Edit</a>
+                                                            <div class="dropdown-divider"></div>
+                                                            <a  class="dropdown-item text-danger pointer" draggable="false"><i class="uil uil-trash mr-2"></i>Delete</a>
+                                                        </div>
+                                                    </div>
+                                                    <label class="font-weight-bold d-inline mr-2 ml-2">Add Test </label>
+                                                </div>  
+                                            </div>
+                                        </div>
+                                    </div>   
+                                </div>
+
+
+                                 <div class="col-md-12 mx-auto">
+                                    <div class="card">
+                                        <div class="add-course-all">
+                                                <div class="row">
+                                                    <div class="col-md-5 col-lg-5 col-12">
+                                                        <div class="d-flex">
+                                                            <div class="dropdown d-inline">
+                                                                <a class="font-weight-bold dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                    <i class="uil uil-ellipsis-v font-size-14 align-middle"></i>
+                                                                </a>
+                                                                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(0px, 19px, 0px);">
+                                                                    <a class="dropdown-item pointer" draggable="false"><i class="uil uil-edit-alt mr-2"></i>Edit</a>
+                                                                    <div class="dropdown-divider"></div>
+                                                                    <a  class="dropdown-item text-danger pointer" draggable="false"><i class="uil uil-trash mr-2"></i>Delete</a>
+                                                                </div>
+                                                            </div>
+                                                            <select class="ml-3 form-control">
+                                                                <option>Select Test</option>
+                                                                <option>Select Test</option>
+                                                                <option>Select Test</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>  
+                                                     <div class="col-md-7 col-lg-7 col-12">
+                                                           <div class="text-right">
+                                                                <div class="btn-group ml-2 d-none d-sm-inline-block">
+                                                                    <button type="button" class="btn btn-soft-success btn-sm mr-2"><i class="uil uil-check mr-1"></i></button>
+                                                                </div>
+                                                                <div class="btn-group d-none d-sm-inline-block">
+                                                                    <button type="button" class="btn btn-soft-danger btn-sm"><i class="uil uil-trash mr-1"></i></button>
+                                                                </div>
+                                                           </div>
+                                                     </div> 
+                                                </div>
+                                        </div>
+                                    </div>
+                                 </div>
+
+
+                                 <div class="col-md-12 mx-auto">
+                                    <div class="card">
+                                        <div class="add-course-all">
+                                                <div class="row">
+                                                    <div class="col-md-5 col-lg-5 col-12">
+                                                        <div class="d-flex">
+                                                            <div class="dropdown d-inline">
+                                                                <a class="font-weight-bold dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                    <i class="uil uil-ellipsis-v font-size-14 align-middle"></i>
+                                                                </a>
+                                                                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(0px, 19px, 0px);">
+                                                                    <a class="dropdown-item pointer" draggable="false"><i class="uil uil-edit-alt mr-2"></i>Edit</a>
+                                                                    <div class="dropdown-divider"></div>
+                                                                    <a  class="dropdown-item text-danger pointer" draggable="false"><i class="uil uil-trash mr-2"></i>Delete</a>
+                                                                </div>
+                                                            </div>
+                                                            <div class="ml-3 card mb-2 shadow-none border">
+                                                                <div class="p-1 px-2">
+                                                                    <div class="row align-items-center">
+                                                                        <div class="col-auto">
+                                                                            <i class="uil uil-file-alt text-primary"></i>
+                                                                        </div>
+                                                                        <div class="col pl-0 ml-1">
+                                                                            <a class="text-muted font-weight-bold">new-contarcts.pdf</a>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>  
+                                                     <div class="col-md-7 col-lg-7 col-12">
+                                                           <div class="text-right">
+                                                                <div class="btn-group ml-2 d-none d-sm-inline-block">
+                                                                    <button type="button" class="btn btn-soft-success btn-sm mr-2"><i class="uil uil-check mr-1"></i></button>
+                                                                </div>
+                                                                <div class="btn-group d-none d-sm-inline-block">
+                                                                    <button type="button" class="btn btn-soft-danger btn-sm"><i class="uil uil-trash mr-1"></i></button>
+                                                                </div>
+                                                           </div>
+                                                     </div> 
+                                                </div>
+                                        </div>
+                                    </div>
+                                 </div>
+
+                                <div class="card">
+                                    <div class="under-course-file">
+                                         <div class="row">
+                                              <div class="col-md-3">
+                                                   <h6>Upload File</h6>
+                                              </div>
+                                              <div class="col-md-9">
+                                                   <div class="text-right ad-course-li">
+                                                       <ul>
+                                                           <li>
+                                                            <a data-target="#live-stream" data-toggle="modal" class="btn btn-outline-primary"> <i class="uil uil-rss-alt text-primary"></i> Live Stream</a>
+                                                           </li>
+                                                           <li>
+                                                                <div class="image-upload">
+                                                                    <label for="file-input">
+                                                                        <a class="btn btn-outline-primary"><i class="uil uil-file-alt text-primary"></i> Pdf</a>
+                                                                    </label> 
+                                                                    <input id="file-input" type="file" name="test" accept=".pdf,.doc"/>
+                                                                </div>
+                                                           </li>
+                                                           <li>
+                                                               <a class="btn btn-outline-primary"><i class="uil uil-video text-primary"></i> Video</a>
+                                                           </li>
+                                                           <li>
+                                                                <a  class="btn btn-outline-primary "><i class="uil uil-cloud-question text-primary"></i> Test</a>
+                                                           </li>
+                                                       </ul>
+                                                       
+                                                   </div>
+                                              </div> 
+                                         </div>
+                                   </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-6 mx-auto">
+                                <div class="mt-3 text-center form-group">
+                                    <button class="btn btn-primary btn-sm mr-3" routerLink="/product/{{this.productId}}/decide-cost"><i class="uil uil-arrow-left"></i> Previous  </button>
+                                    <button class="btn btn-success btn-sm" routerLink="/product/{{this.productId}}/product-publish">Next <i class="uil uil-arrow-right"></i> </button>
+                                </div>
+                            </div>  
+                        </div>
+                    </div> <!-- end col -->
+                </div>
+            </div>
+            <!-- end row -->
+        </div> <!-- container-fluid -->
+    </div> <!-- content -->
+</div> 
+
+<div class="modal fade" id="live-stream" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="myExtraLargeModalLabel">Live Stram Class</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body scroll-course">
+                  <div class="row">
+                    <div class="col-md-2">
+                        <label class="w-100">Select Filter</label>
+                        <select class="form-control">
+                            <option>Test Name</option>
+                            <option>Test Category</option>
+                        </select> 
+                    </div>
+                    <!-- <div class="col-md-3">
+                        <div class="form-group">
+                             <label class="w-100">From</label>
+                             <mat-form-field>
+                                <input matInput [matDatepicker]="picker4" placeholder="">
+                                <mat-datepicker-toggle matSuffix [for]="picker4"></mat-datepicker-toggle>
+                                <mat-datepicker #picker4></mat-datepicker>
+                              </mat-form-field>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="form-group">
+                             <label class="w-100">To</label>
+                             <mat-form-field>
+                                <input matInput [matDatepicker]="picker3">
+                                <mat-datepicker-toggle matSuffix [for]="picker3"></mat-datepicker-toggle>
+                                <mat-datepicker #picker3></mat-datepicker>
+                              </mat-form-field>
+                        </div>
+                    </div> -->
+                  </div> 
+                  <div class="row m-b-30">
+                        <div class="offset-md-9 col-md-3">
+                            <input type="text" class="form-control" placeholder="Search">
+                        </div>
+                  </div>
+                <div class="mt-4 mat-elevation-z8 table-responsive">
+                    <table mat-table [dataSource]="dataSource" class="table">
+                    
+                        <!-- Position Column -->
+                        <ng-container matColumnDef="id">
+                        <th mat-header-cell *matHeaderCellDef>
+                            <div class="custom-control custom-checkbox mb-2">
+                            <input type="checkbox" class="custom-control-input" id="customCheck1">
+                            <label class="custom-control-label" for="customCheck1">Sr. No.</label>
+                            </div> 
+                    </th>
+                        <td mat-cell *matCellDef="let element"> 
+                            <div class="custom-control custom-checkbox mb-2">
+                            <input type="checkbox" class="custom-control-input" id="customCheck1">
+                            <label class="custom-control-label" for="customCheck1">{{element.id}}.</label>
+                            </div> 
+                            </td>
+                        </ng-container>
+                    
+                        <!-- Name Column -->
+                        <ng-container matColumnDef="uid">
+                        <th mat-header-cell *matHeaderCellDef>Live Class Name</th>
+                        <td mat-cell *matCellDef="let element"> {{element.uid}} </td>
+                        </ng-container>
+                    
+                        <!-- Weight Column -->
+                        <ng-container matColumnDef="username">
+                        <th mat-header-cell *matHeaderCellDef>Mentor Name</th>
+                            <td mat-cell *matCellDef="let element"> {{element.username}} </td>
+                        </ng-container>
+
+                        <ng-container matColumnDef="eroll">
+                        <th mat-header-cell *matHeaderCellDef>Time</th>
+                            <td mat-cell *matCellDef="let element"> {{element.eroll}} </td>
+                        </ng-container>
+                    
+                        <!-- Symbol Column -->
+                        <ng-container matColumnDef="bdatetime">
+                        <th mat-header-cell *matHeaderCellDef>Date</th>
+                        <td mat-cell *matCellDef="let element"> {{element.bdatetime}} </td>
+                        </ng-container>
+
+                        <ng-container matColumnDef="sname">
+                        <th mat-header-cell *matHeaderCellDef>No. Of Product</th>
+                        <td mat-cell *matCellDef="let element"> {{element.sname}} </td>
+                        </ng-container>
+
+                        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                    </table>
+                    
+                    <mat-paginator [pageSizeOptions]="[10, 20, 50]" showFirstLastButtons></mat-paginator>
+                </div>
+            </div>                                                
+        </div>
+    </div>
+</div>

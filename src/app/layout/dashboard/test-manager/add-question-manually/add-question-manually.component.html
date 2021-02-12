@@ -1,0 +1,156 @@
+<app-header></app-header>
+<app-sidebar></app-sidebar>
+<div id="testPage"></div>
+<div class="content-page">
+    <div class="content">
+        
+        <!-- Start Content-->
+        <div class="container-fluid">
+            <div class="row page-title mt-2 d-print-none">
+                <div class="col-md-12">
+                    <nav aria-label="breadcrumb" class="float-right mt-1">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a class="fw-600">Test</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Add Question Manually</li>
+                        </ol>
+                    </nav>
+                    <h4 class="mb-1 mt-0">Add Question Manually</h4>
+                </div>
+            </div>
+            <form [formGroup]="addQuestionForm" (ngSubmit)="saveQuestionDetails()">
+            <div class="row" >
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <h6 class="mb-4">Add Questions</h6>
+                                    <div class="form-group">
+                                          <label><span class="text-danger">*</span> Select Subject <span tooltip="Slide to the right" flow="right"><i class="ml-1 pointer uil uil-info-circle"></i></span></label>
+                                          <select formControlName="subject" class="form-control">
+                                               <option>Choose</option>
+                                              <option>Choose1</option>
+                                              <option>Choose2</option>
+                                          </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label><span class="text-danger">*</span> Select Topic <span tooltip="Slide to the right" flow="right"><i class="ml-1 pointer uil uil-info-circle"></i></span></label>
+                                        <select formControlName="topic" class="form-control">
+                                          <option>Choose1</option>
+                                          <option>Choose2</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label><span class="text-danger">*</span> Question Type <span tooltip="Slide to the right" flow="right"><i class="ml-1 pointer uil uil-info-circle"></i></span></label>
+                                      <select formControlName="questionType" class="form-control">
+                                        <option>Choose1</option>
+                                        <option>Choose2</option>
+                                      </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Language</label>
+                                        <select class="form-control" formControlName="language">
+                                          <option>Choose1</option>
+                                          <option>Choose2</option>
+                                        </select>
+                                    </div>
+                                    <!-- <div class="form-group">
+                                        <label>Total Question</label>
+                                         <input type="text" class="form-control">
+                                    </div> -->
+                                    <!-- <div class="form-group">
+                                        <label>Current Question No</label>
+                                         <input type="text" class="form-control">
+                                    </div> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <div class="card">
+                        <div class="card-body" formArrayName="questions">
+                            <div class="row" *ngFor="let question of questions.controls; index as i">
+                              <div class="col-md-12" [formGroupName]="i">
+                                   <div class="form-group">
+                                         <label class="w-100"><span class="text-danger">*</span> Type Your Questions <span tooltip="Slide to the right" flow="right"><i class="ml-1 pointer uil uil-info-circle"></i></span>
+                                        </label>
+                                        <!-- <div class=" float-right custom-control custom-switch mb-2">
+                                            <input type="checkbox" class="custom-control-input" id="customSwitch1">
+                                            <label class="custom-control-label" for="customSwitch1"></label>
+                                        </div> -->
+                                        <textarea class="form-control" rows="3" formControlName="questionTitle"></textarea>
+                                   </div>
+                                   <div class="form-group">
+                                        <label class="w-100"> Add Explanation
+                                        </label>
+                                        <!-- <div class=" float-right custom-control custom-switch mb-2">
+                                            <input type="checkbox" class="custom-control-input" id="customSwitch1">
+                                            <label class="custom-control-label" for="customSwitch1">Is Image Type</label>
+                                        </div> -->
+                                        <textarea class="form-control" rows="3" formControlName="explanation"></textarea>
+                                   </div>
+                                   <div class="form-group">
+                                        <h6>Advance Option</h6>
+                                   </div>
+                                   <div class="form-group">
+                                        <label class="w-100"><span class="text-danger">*</span>Add Tags  <span tooltip="Slide to the right" flow="right"><i class="ml-1 pointer uil uil-info-circle"></i></span>
+                                        </label>
+                                        <input type="text" class="form-control" formControlName="tags">
+                                        <!-- <div class="mt-2 custom-control custom-checkbox mb-2">
+                                            <input type="checkbox" class="custom-control-input" id="customCheck1">
+                                            <label class="custom-control-label" for="customCheck1">Attach Easy</label>
+                                        </div> -->
+                                    </div>
+                                    <div class="form-group">
+                                         <div class="row">
+                                          <div class="col-md-4">
+                                            <label class="w-100"> Right Marks <span tooltip="Slide to the right" flow="right"><i class="ml-1 pointer uil uil-info-circle"></i><span
+                                                  class="material-icons fs-16 ml-1 icon-image-preview"></span></span>
+                                            </label>
+                                            <input type="number" class="form-control" formControlName="rightMarks">
+                                          </div>
+                                              <!-- <div class="col-md-4">
+                                                    <label class="w-100"> Right Marks  <span tooltip="Slide to the right" flow="right"><i class="ml-1 pointer uil uil-info-circle"></i></span>
+                                                    </label>
+                                                    <input type="text" class="form-control">
+                                              </div> -->
+                                              <div class="col-md-4">
+                                                <label class="w-100"> Negative Marks <span tooltip="Slide to the right" flow="right"><i class="ml-1 pointer uil uil-info-circle"></i><span
+                                                      class="material-icons fs-16 ml-1 icon-image-preview"></span></span>
+                                                </label>
+                                                <input type="number" class="form-control" formControlName="negativeMarks">
+                                              </div>
+                                              <!-- <div class="col-md-4">
+                                                    <label class="w-100"> Negative Marks  <span tooltip="Slide to the right" flow="right"><i class="ml-1 pointer uil uil-info-circle"></i></span>
+                                                    </label>
+                                                    <input type="text" class="form-control">
+                                              </div> -->
+                                              <div class="col-md-4">
+                                                    <label class="w-100"> Difficulty Level  <span tooltip="Slide to the right" flow="right"><i class="ml-1 pointer uil uil-info-circle"></i></span>
+                                                    </label>
+                                                    <select class="form-control" formControlName="dificultyLevel">
+                                                      <option>Select Difficulty</option>
+                                                      <option>Difficulty Level 1</option>
+                                                      <option>Difficulty Level 2</option>
+                                                      <option>Difficulty Level 3</option>
+                                                    </select>
+                                              </div>
+                                         </div>
+                                    </div>
+                               </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mx-auto">
+                    <div class="mt-3 mb-4 text-center form-group">
+                        <button [disabled]="addQuestionForm.invalid" class="btn btn-success" >Save </button>
+                    </div>
+                </div>    
+            </div>
+            </form>
+        </div> <!-- container-fluid -->
+    </div> <!-- content -->
+</div> 
+

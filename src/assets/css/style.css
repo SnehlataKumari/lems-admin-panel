@@ -1,0 +1,2702 @@
+.active-link {
+    border-left: 3px solid  #013f70;;
+    color:  #013f70;;
+    background-color: #f7f7ff;
+}
+ 
+.btn-primary {
+    color: #fff !important;
+    background-color: #013f70;
+    border-color: #013f70;
+}
+.btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show>.btn-primary.dropdown-toggle {
+    color: #fff;
+    background-color: #00b282;
+    border-color: #00b282;
+}
+.btn-primary:hover {
+    color: #fff;
+    background-color: #00b282;
+    border-color: #00b282;
+}
+.custom-control-input:checked~.custom-control-label::before {
+    color: #fff;
+    border-color: #013f70;
+    background-color: #013f70;
+}
+.authentication-bg{
+    position: relative;
+    background-color: #013f70;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    position: relative;
+    background-size: cover;
+    min-height: 100vh;
+    display: list-item;
+    align-items: center;
+}
+
+.authentication-bg:before{
+    background-color: rgb(4, 58, 101);
+    -webkit-clip-path: polygon(0 70%, 40% 0, 60% 0, 100% 70%, 100% 100%, 0 100%);
+    clip-path: polygon(0 70%, 40% 0, 60% 0, 100% 70%, 100% 100%, 0 100%);
+    content: '';
+    position: absolute;
+    top: auto;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 50%;
+    width: 100%;
+    z-index: 0;
+}
+.white{
+    color: #fff;
+}
+.badge {
+  font-weight: 500;
+}
+
+.footer {
+    padding: 12px 15px 12px;
+    position: fixed;
+    background-color: #ffff;
+}
+.pointer{
+    cursor: pointer;
+}
+.dropdown-menu.dropdown-menu-right.show{
+    height: 300px !important;
+    overflow-y: auto;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    color: #fff;
+    background-color: #013f70;
+}
+th.mat-header-cell:first-of-type, td.mat-cell:first-of-type, td.mat-footer-cell:first-of-type {
+    padding-left: 0 !important;
+}
+.table td, .table th {
+	padding: 0.60rem !important;
+    vertical-align: middle !important;
+	border-top: 1px solid #e9ecef; 
+	min-width: 100px;
+    max-width: 180px;
+}
+.mat-paginator-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start !important;
+    min-height: 56px;
+    padding: 0 8px;
+    flex-wrap: inherit;
+}
+.modal-body, .auth-box {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+}
+.fs-34{
+    font-size: 34px;
+}
+.fw-600{
+  font-weight: 600;
+}
+.breadcrumb-item a{
+  color: #013f70 !important;
+}
+.right-bar-enabled .rightbar-overlay {
+  display: none;
+}
+.sidebar-menu{
+  height: 100% !important;
+}
+.sfl-question{
+  position: relative;
+}
+.grouping-ul{
+  position: relative;
+
+}
+.grouping-ul ul{
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 10px;
+}
+.accordionExample h5{ 
+  font-weight: 500 !important;
+}
+.assign-group{
+  position: relative;
+  margin-bottom: 12px;
+}
+.assign-group-list{
+  position: relative;
+  overflow-y: auto;
+  height: 258px;
+  border-radius: 5px;
+  padding: 13px;
+  border: 1px solid #ddd;
+}
+.assign-group-list ul{
+   list-style: none;
+   padding-left: 0;
+}
+.assign-group-list ul li{
+  display: block;
+  width: 100% !important;
+  margin-bottom: 13px;
+}
+.black-img{
+  position: relative;
+  display: flex;
+  align-items: center;
+  vertical-align: middle;
+  height: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.black-img img{
+  width: 130px;
+  height: 130px;
+  margin: 0 auto;
+  text-align: center;
+}
+.table-info1, .table-info1>td, .table-info1>th {
+  background-color: #f6feff;
+}
+.add-pic .pic-box{
+  margin-top: 20px;
+}
+
+.logoImg .hide{display:none;}
+.logoImg {
+  clear: both;width: 100px;text-align: center;position: relative;max-width: 100%;
+}
+.logoImg img{
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  height: 100px;
+  border: 1px solid #ddd;
+}
+.logoImg .btn {
+display: inline-block;
+padding: 4px 12px;
+margin-bottom: 0;
+font-size: 14px;
+line-height: 20px;
+color: #333333;
+text-align: center;
+vertical-align: middle;
+cursor: pointer;
+border: 1px solid #bbbbbb;
+border-color: #e6e6e6 #e6e6e6 #bfbfbf;
+border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+border-bottom-color: #a2a2a2;
+-webkit-border-radius: 4px;
+-moz-border-radius: 4px;
+border-radius: 4px;
+}
+.logoImg .btn {
+border-color: #FF7700;
+}
+.logoImg .btn-large {
+    padding: 5px;
+    width: 50px;height: 50px;
+    position: absolute;
+    bottom: -13px;
+    background-position: center;
+    background-size: 40px;
+    background-repeat: no-repeat;
+    border: none;
+    right: -20px;
+    font-size: 17.5px;
+    background-image: url('../images/plus-icon.png');
+
+}
+.sm-product ul li {
+  width: 25% !important;
+} 
+.padding-25 {
+  padding: 25px;
+}
+.add-course-all{
+  position: relative;
+  padding: 10px;
+}
+.under-course{
+  position: relative;
+  padding: 12px;
+}
+.under-course-file{
+  position: relative;
+  padding: 18px;
+} 
+.scroll-course{
+  position: relative;
+  height: 500px;
+  overflow-y: auto;
+}
+.image-upload > input
+{
+    display: none;
+}
+.ad-course-li{
+  position: relative;
+} 
+.ad-course-li ul{
+   list-style: none;
+   margin-bottom: 0;
+} 
+.ad-course-li ul li{
+  display: inline-block;
+  text-align: right;
+  width: 19% !important;
+} 
+.ad-course-li ul li a:hover{
+   color: #fff !important;
+} 
+.ad-course-li ul li:hover{
+  color: #fff !important;
+} 
+
+/* START TOOLTIP STYLES */
+[tooltip] {
+  position: relative; /* opinion 1 */
+}
+
+/* Applies to all tooltips */
+[tooltip]::before,
+[tooltip]::after {
+  text-transform: none; /* opinion 2 */
+  font-size: .9em; /* opinion 3 */
+  line-height: 1;
+  user-select: none;
+  pointer-events: none;
+  position: absolute;
+  display: none;
+  opacity: 0;
+}
+[tooltip]::before {
+  content: '';
+  border: 5px solid transparent; /* opinion 4 */
+  z-index: 1001; /* absurdity 1 */
+}
+[tooltip]::after {
+  content: attr(tooltip); /* magic! */
+  
+  /* most of the rest of this is opinion */
+  font-family: Helvetica, sans-serif;
+  text-align: center;
+  
+  /* 
+    Let the content set the size of the tooltips 
+    but this will also keep them from being obnoxious
+    */
+  min-width: 3em;
+  max-width: 21em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 1ch 1.5ch;
+  border-radius: .3ch;
+  box-shadow: 0 1em 2em -.5em rgba(0, 0, 0, 0.35);
+  background: #333;
+  color: #fff;
+  z-index: 1000; /* absurdity 2 */
+}
+
+/* Make the tooltips respond to hover */
+[tooltip]:hover::before,
+[tooltip]:hover::after {
+  display: block;
+}
+
+/* don't show empty tooltips */
+[tooltip='']::before,
+[tooltip='']::after {
+  display: none !important;
+}
+
+/* FLOW: UP */
+[tooltip]:not([flow])::before,
+[tooltip][flow^="up"]::before {
+  bottom: 100%;
+  border-bottom-width: 0;
+  border-top-color: #333;
+}
+[tooltip]:not([flow])::after,
+[tooltip][flow^="up"]::after {
+  bottom: calc(100% + 5px);
+}
+[tooltip]:not([flow])::before,
+[tooltip]:not([flow])::after,
+[tooltip][flow^="up"]::before,
+[tooltip][flow^="up"]::after {
+  left: 50%;
+  transform: translate(-50%, -.5em);
+}
+
+/* FLOW: DOWN */
+[tooltip][flow^="down"]::before {
+  top: 100%;
+  border-top-width: 0;
+  border-bottom-color: #333;
+}
+[tooltip][flow^="down"]::after {
+  top: calc(100% + 5px);
+}
+[tooltip][flow^="down"]::before,
+[tooltip][flow^="down"]::after {
+  left: 50%;
+  transform: translate(-50%, .5em);
+}
+
+/* FLOW: LEFT */
+[tooltip][flow^="left"]::before {
+  top: 50%;
+  border-right-width: 0;
+  border-left-color: #333;
+  left: calc(0em - 5px);
+  transform: translate(-.5em, -50%);
+}
+[tooltip][flow^="left"]::after {
+  top: 50%;
+  right: calc(100% + 5px);
+  transform: translate(-.5em, -50%);
+}
+
+/* FLOW: RIGHT */
+[tooltip][flow^="right"]::before {
+  top: 50%;
+  border-left-width: 0;
+  border-right-color: #333;
+  right: calc(0em - 5px);
+  transform: translate(.5em, -50%);
+}
+[tooltip][flow^="right"]::after {
+  top: 50%;
+  left: calc(100% + 5px);
+  transform: translate(.5em, -50%);
+}
+
+/* KEYFRAMES */
+@keyframes tooltips-vert {
+  to {
+    opacity: .9;
+    transform: translate(-50%, 0);
+  }
+}
+
+@keyframes tooltips-horz {
+  to {
+    opacity: .9;
+    transform: translate(0, -50%);
+  }
+}
+
+/* FX All The Things */ 
+[tooltip]:not([flow]):hover::before,
+[tooltip]:not([flow]):hover::after,
+[tooltip][flow^="up"]:hover::before,
+[tooltip][flow^="up"]:hover::after,
+[tooltip][flow^="down"]:hover::before,
+[tooltip][flow^="down"]:hover::after {
+  animation: tooltips-vert 300ms ease-out forwards;
+}
+
+[tooltip][flow^="left"]:hover::before,
+[tooltip][flow^="left"]:hover::after,
+[tooltip][flow^="right"]:hover::before,
+[tooltip][flow^="right"]:hover::after {
+  animation: tooltips-horz 300ms ease-out forwards;
+}
+
+#progressbar li:first-child:after {
+	content: none; 
+}
+#progressbar li.active:before,  #progressbar li.active:after{
+	background: #023c70;
+	color: white; 
+} */
+.form-btn {
+	text-align: left;
+    line-height: 1;
+    border: 2px solid #023c70;
+    padding: 7px 25px;
+}
+.btn-filled {
+    background-color: #023c70;
+    border: 2px solid !important;
+}
+.form-field input {
+	border: none;
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+	padding: 9px 15px;
+	width: 100%;
+  }
+  .btn span.bh {
+    background: #fff;
+    border: 10px solid #ffffff8f;
+	border-radius: 50%;
+	color: #fff;
+    display: block;
+    height: 0;
+    position: absolute;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    -webkit-transition: width 0.7s ease 0s, height 0.7s ease 0s;
+    -o-transition: width 0.7s ease 0s, height 0.7s ease 0s;
+    transition: width 0.7s ease 0s, height 0.7s ease 0s;
+    width: 0;
+    z-index: 1;
+    opacity: 0;
+}
+.btn span {
+	color: #fff;
+	font-size: 18px;
+	font-weight: 500;
+ }
+.btn span i {
+   color: #fff;
+}
+.btn-filled:hover{
+  background-color: transparent;
+  color:#023c70; 
+  border: 2px solid #023c70;
+}
+.btn-filled:hover span{ 
+color:#023c70; 
+}
+.btn-filled:hover i{ 
+color:#023c70; 
+}
+.input-group-text svg{
+  color: #023c70;
+}
+.preloader.stop{
+  display: none;
+  animation-play-state: paused; 
+}
+label{
+  font-weight: 500 !important;
+}
+#sidebar-menu li.pcoded-hasmenu.pcoded-trigger>a>span.menu-arrow {
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+ul.pcoded-submenu{
+  display: none; 
+}
+#sidebar-menu li.pcoded-hasmenu.pcoded-trigger>ul.pcoded-submenu {
+  display: block;
+}
+
+.p-0 {
+	padding: 0px;
+}
+
+.p-5 {
+	padding: 5px;
+}
+
+.p-10 {
+	padding: 10px;
+}
+
+.p-15 {
+	padding: 15px;
+}
+
+.p-20 {
+	padding: 20px;
+}
+
+.p-25 {
+	padding: 25px;
+}
+
+.p-30 {
+	padding: 30px;
+}
+
+.p-35 {
+	padding: 35px;
+}
+
+.p-40 {
+	padding: 40px;
+}
+
+.p-45 {
+	padding: 45px;
+}
+
+.p-50 {
+	padding: 50px;
+}
+
+.p-t-0 {
+	padding-top: 0px!important;
+}
+
+.p-t-5 {
+	padding-top: 5px!important;
+}
+
+.p-t-10 {
+	padding-top: 10px!important;
+}
+
+.p-t-15 {
+	padding-top: 15px!important;
+}
+
+.p-t-20 {
+	padding-top: 20px!important;
+}
+
+.p-t-25 {
+	padding-top: 25px!important;
+}
+
+.p-t-30 {
+	padding-top: 30px!important;
+}
+
+.p-t-35 {
+	padding-top: 35px!important;
+}
+
+.p-t-40 {
+	padding-top: 40px!important;
+}
+
+.p-t-45 {
+	padding-top: 45px!important;
+}
+
+.p-t-50 {
+	padding-top: 50px!important;
+}
+
+.p-b-0 {
+	padding-bottom: 0px!important;
+}
+
+.p-b-5 {
+	padding-bottom: 5px!important;
+}
+
+.p-b-10 {
+	padding-bottom: 10px!important;
+}
+
+.p-b-15 {
+	padding-bottom: 15px!important;
+}
+
+.p-b-20 {
+	padding-bottom: 20px!important;
+}
+
+.p-b-25 {
+	padding-bottom: 25px!important;
+}
+
+.p-b-30 {
+	padding-bottom: 30px!important;
+}
+
+.p-b-35 {
+	padding-bottom: 35px!important;
+}
+
+.p-b-40 {
+	padding-bottom: 40px!important;
+}
+
+.p-b-45 {
+	padding-bottom: 45px!important;
+}
+
+.p-b-50 {
+	padding-bottom: 50px!important;
+}
+
+.p-l-0 {
+	padding-left: 0px;
+}
+
+.p-l-5 {
+	padding-left: 5px;
+}
+
+.p-l-10 {
+	padding-left: 10px;
+}
+
+.p-l-15 {
+	padding-left: 15px;
+}
+
+.p-l-20 {
+	padding-left: 20px;
+}
+
+.p-l-25 {
+	padding-left: 25px;
+}
+
+.p-l-30 {
+	padding-left: 30px;
+}
+
+.p-l-35 {
+	padding-left: 35px;
+}
+
+.p-l-40 {
+	padding-left: 40px;
+}
+
+.p-l-45 {
+	padding-left: 45px;
+}
+
+.p-l-50 {
+	padding-left: 50px;
+}
+
+.p-r-0 {
+	padding-right: 0px;
+}
+
+.p-r-5 {
+	padding-right: 5px;
+}
+
+.p-r-10 {
+	padding-right: 10px;
+}
+
+.p-r-15 {
+	padding-right: 15px;
+}
+
+.p-r-20 {
+	padding-right: 20px;
+}
+
+.p-r-25 {
+	padding-right: 25px;
+}
+
+.p-r-30 {
+	padding-right: 30px;
+}
+
+.p-r-35 {
+	padding-right: 35px;
+}
+
+.p-r-40 {
+	padding-right: 40px;
+}
+
+.p-r-45 {
+	padding-right: 45px;
+}
+
+.p-r-50 {
+	padding-right: 50px;
+}
+
+.m-0 {
+	margin: 0px;
+}
+
+.m-5 {
+	margin: 5px;
+}
+
+.m-10 {
+	margin: 10px;
+}
+
+.m-15 {
+	margin: 15px;
+}
+
+.m-20 {
+	margin: 20px;
+}
+
+.m-25 {
+	margin: 25px;
+}
+
+.m-30 {
+	margin: 30px;
+}
+
+.m-35 {
+	margin: 35px;
+}
+
+.m-40 {
+	margin: 40px;
+}
+
+.m-45 {
+	margin: 45px;
+}
+
+.m-50 {
+	margin: 50px;
+}
+
+.m-t-0 {
+	margin-top: 0px;
+}
+
+.m-t-5 {
+	margin-top: 5px;
+}
+
+.m-t-10 {
+	margin-top: 10px;
+}
+
+.m-t-15 {
+	margin-top: 15px;
+}
+
+.m-t-20 {
+	margin-top: 20px;
+}
+
+.m-t-25 {
+	margin-top: 25px;
+}
+
+.m-t-30 {
+	margin-top: 30px;
+}
+
+.m-t-35 {
+	margin-top: 35px;
+}
+
+.m-t-40 {
+	margin-top: 40px;
+}
+
+.m-t-45 {
+	margin-top: 45px;
+}
+
+.m-t-50 {
+	margin-top: 50px;
+}
+.m-t-55{
+	margin-top: 55px;
+}
+.m-t-60{
+	margin-top: 60px;
+}
+.m-t-65{
+	margin-top: 66px;
+}
+.m-t-70{
+	margin-top: 70px;
+}
+.m-b-0 {
+	margin-bottom: 0px;
+}
+
+.m-b-5 {
+	margin-bottom: 5px;
+}
+
+.m-b-10 {
+	margin-bottom: 10px;
+}
+
+.m-b-15 {
+	margin-bottom: 15px;
+}
+
+.m-b-20 {
+	margin-bottom: 20px;
+}
+
+.m-b-25 {
+	margin-bottom: 25px;
+}
+
+.m-b-30 {
+	margin-bottom: 30px;
+}
+
+.m-b-35 {
+	margin-bottom: 35px;
+}
+
+.m-b-40 {
+	margin-bottom: 40px;
+}
+
+.m-b-45 {
+	margin-bottom: 45px;
+}
+
+.m-b-50 {
+	margin-bottom: 50px;
+}
+
+.m-l-0 {
+	margin-left: 0px;
+}
+
+.m-l-5 {
+	margin-left: 5px;
+}
+
+.m-l-10 {
+	margin-left: 10px;
+}
+
+.m-l-15 {
+	margin-left: 15px;
+}
+
+.m-l-20 {
+	margin-left: 20px;
+}
+
+.m-l-25 {
+	margin-left: 25px;
+}
+
+.m-l-30 {
+	margin-left: 30px;
+}
+
+.m-l-35 {
+	margin-left: 35px;
+}
+.m-l-40 {
+	margin-left: 40px;
+}
+
+.m-l-45 {
+	margin-left: 45px;
+}
+
+.m-l-50 {
+	margin-left: 50px;
+}
+
+.m-r-0 {
+	margin-right: 0px;
+}
+
+.m-r-5 {
+	margin-right: 5px;
+}
+
+.m-r-10 {
+	margin-right: 10px;
+}
+
+.m-r-15 {
+	margin-right: 15px;
+}
+
+.m-r-20 {
+	margin-right: 20px;
+}
+
+.m-r-25 {
+	margin-right: 25px;
+}
+
+.m-r-30 {
+	margin-right: 30px;
+}
+
+.m-r-35 {
+	margin-right: 35px;
+}
+
+.m-r-40 {
+	margin-right: 40px;
+}
+
+.m-r-45 {
+	margin-right: 45px;
+}
+
+.m-r-50 {
+	margin-right: 50px;
+}
+
+.d-none {
+	display: none;
+}
+
+.progress {
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+    background: none;
+    margin: 0 auto;
+    box-shadow: none;
+    position: relative;
+  }
+  .progress:after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 5px solid #efefef;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .progress > span {
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+  }
+  .progress .progress-left {
+    left: 0;
+  }
+  .progress .progress-bar {
+    width: 100%;
+    height: 100%;
+    background: none;
+    border-width: 5px;
+    border-style: solid;
+    position: absolute;
+    top: 0;
+    border-color: #013f70;
+  }
+  .progress .progress-left .progress-bar {
+    left: 100%;
+    border-top-right-radius: 80px;
+    border-bottom-right-radius: 80px;
+    border-left: 0;
+    -webkit-transform-origin: center left;
+    transform-origin: center left;
+  }
+  .progress .progress-right {
+    right: 0;
+  }
+  .progress .progress-right .progress-bar {
+    left: -100%;
+    border-top-left-radius: 80px;
+    border-bottom-left-radius: 80px;
+    border-right: 0;
+    -webkit-transform-origin: center right;
+    transform-origin: center right;
+  }
+  .progress .progress-value {
+    display: flex;
+    border-radius: 50%;
+    font-size: 1rem;
+    text-align: center;
+    line-height: 20px;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    font-weight: 300;
+  }
+  .progress .progress-value span {
+    font-size: 12px;
+    text-transform: uppercase;
+  }
+  a {
+    color: #013f70;
+   }
+  
+  .progress[data-percentage="1"] .progress-right .progress-bar {
+    animation: loading-1 0.5s linear forwards;
+  }
+  .progress[data-percentage="1"] .progress-left .progress-bar {
+    animation: 0;
+  }
+  
+  .progress[data-percentage="2"] .progress-right .progress-bar {
+    animation: loading-2 0.5s linear forwards;
+  }
+  .progress[data-percentage="2"] .progress-left .progress-bar {
+    animation: 0;
+  }
+  
+  .progress[data-percentage="3"] .progress-right .progress-bar {
+    animation: loading-3 0.5s linear forwards;
+  }
+  .progress[data-percentage="3"] .progress-left .progress-bar {
+    animation: 0;
+  }
+  
+  .progress[data-percentage="4"] .progress-right .progress-bar {
+    animation: loading-4 0.5s linear forwards;
+  }
+  .progress[data-percentage="4"] .progress-left .progress-bar {
+    animation: 0;
+  }
+  
+  .progress[data-percentage="5"] .progress-right .progress-bar {
+    animation: loading-5 0.5s linear forwards;
+  }
+  .progress[data-percentage="5"] .progress-left .progress-bar {
+    animation: 0;
+  }
+  
+  .progress[data-percentage="6"] .progress-right .progress-bar {
+    animation: loading-6 0.5s linear forwards;
+  }
+  .progress[data-percentage="6"] .progress-left .progress-bar {
+    animation: 0;
+  }
+  
+  .progress[data-percentage="7"] .progress-right .progress-bar {
+    animation: loading-7 0.5s linear forwards;
+  }
+  .progress[data-percentage="7"] .progress-left .progress-bar {
+    animation: 0;
+  }
+  
+  .progress[data-percentage="8"] .progress-right .progress-bar {
+    animation: loading-8 0.5s linear forwards;
+  }
+  .progress[data-percentage="8"] .progress-left .progress-bar {
+    animation: 0;
+  }
+  
+  .progress[data-percentage="9"] .progress-right .progress-bar {
+    animation: loading-9 0.5s linear forwards;
+  }
+  .progress[data-percentage="9"] .progress-left .progress-bar {
+    animation: 0;
+  }
+  
+  .progress[data-percentage="10"] .progress-right .progress-bar {
+    animation: loading-10 0.5s linear forwards;
+  }
+  .progress[data-percentage="10"] .progress-left .progress-bar {
+    animation: 0;
+  }
+  
+  .progress[data-percentage="11"] .progress-right .progress-bar {
+    animation: loading-11 0.5s linear forwards;
+  }
+  .progress[data-percentage="11"] .progress-left .progress-bar {
+    animation: 0;
+  }
+  
+  .progress[data-percentage="12"] .progress-right .progress-bar {
+    animation: loading-12 0.5s linear forwards;
+  }
+  .progress[data-percentage="12"] .progress-left .progress-bar {
+    animation: 0;
+  }
+  
+  .progress[data-percentage="13"] .progress-right .progress-bar {
+    animation: loading-13 0.5s linear forwards;
+  }
+  .progress[data-percentage="13"] .progress-left .progress-bar {
+    animation: 0;
+  }
+  
+  .progress[data-percentage="14"] .progress-right .progress-bar {
+    animation: loading-14 0.5s linear forwards;
+  }
+  .progress[data-percentage="14"] .progress-left .progress-bar {
+    animation: 0;
+  }
+  
+  .progress[data-percentage="15"] .progress-right .progress-bar {
+    animation: loading-15 0.5s linear forwards;
+  }
+  .progress[data-percentage="15"] .progress-left .progress-bar {
+    animation: 0;
+  }
+  
+  .progress[data-percentage="16"] .progress-right .progress-bar {
+    animation: loading-16 0.5s linear forwards;
+  }
+  .progress[data-percentage="16"] .progress-left .progress-bar {
+    animation: 0;
+  }
+  
+  .progress[data-percentage="17"] .progress-right .progress-bar {
+    animation: loading-17 0.5s linear forwards;
+  }
+  .progress[data-percentage="17"] .progress-left .progress-bar {
+    animation: 0;
+  }
+  
+  .progress[data-percentage="18"] .progress-right .progress-bar {
+    animation: loading-18 0.5s linear forwards;
+  }
+  .progress[data-percentage="18"] .progress-left .progress-bar {
+    animation: 0;
+  }
+  
+  .progress[data-percentage="19"] .progress-right .progress-bar {
+    animation: loading-19 0.5s linear forwards;
+  }
+  .progress[data-percentage="19"] .progress-left .progress-bar {
+    animation: 0;
+  }
+  
+  .progress[data-percentage="20"] .progress-right .progress-bar {
+    animation: loading-20 0.5s linear forwards;
+  }
+  .progress[data-percentage="20"] .progress-left .progress-bar {
+    animation: 0;
+  }
+  
+  .progress[data-percentage="21"] .progress-right .progress-bar {
+    animation: loading-21 0.5s linear forwards;
+  }
+  .progress[data-percentage="21"] .progress-left .progress-bar {
+    animation: 0;
+  }
+  
+  .progress[data-percentage="22"] .progress-right .progress-bar {
+    animation: loading-22 0.5s linear forwards;
+  }
+  .progress[data-percentage="22"] .progress-left .progress-bar {
+    animation: 0;
+  }
+  
+  .progress[data-percentage="23"] .progress-right .progress-bar {
+    animation: loading-23 0.5s linear forwards;
+  }
+  .progress[data-percentage="23"] .progress-left .progress-bar {
+    animation: 0;
+  }
+  
+  .progress[data-percentage="24"] .progress-right .progress-bar {
+    animation: loading-24 0.5s linear forwards;
+  }
+  .progress[data-percentage="24"] .progress-left .progress-bar {
+    animation: 0;
+  }
+  
+  .progress[data-percentage="25"] .progress-right .progress-bar {
+    animation: loading-25 0.5s linear forwards;
+  }
+  .progress[data-percentage="25"] .progress-left .progress-bar {
+    animation: 0;
+  }
+  
+  .progress[data-percentage="26"] .progress-right .progress-bar {
+    animation: loading-26 0.5s linear forwards;
+  }
+  .progress[data-percentage="26"] .progress-left .progress-bar {
+    animation: 0;
+  }
+  
+  .progress[data-percentage="27"] .progress-right .progress-bar {
+    animation: loading-27 0.5s linear forwards;
+  }
+  .progress[data-percentage="27"] .progress-left .progress-bar {
+    animation: 0;
+  }
+  
+  .progress[data-percentage="28"] .progress-right .progress-bar {
+    animation: loading-28 0.5s linear forwards;
+  }
+  .progress[data-percentage="28"] .progress-left .progress-bar {
+    animation: 0;
+  }
+  
+  .progress[data-percentage="29"] .progress-right .progress-bar {
+    animation: loading-29 0.5s linear forwards;
+  }
+  .progress[data-percentage="29"] .progress-left .progress-bar {
+    animation: 0;
+  }
+  
+  .progress[data-percentage="30"] .progress-right .progress-bar {
+    animation: loading-30 0.5s linear forwards;
+  }
+  .progress[data-percentage="30"] .progress-left .progress-bar {
+    animation: 0;
+  }
+  
+  .progress[data-percentage="31"] .progress-right .progress-bar {
+    animation: loading-31 0.5s linear forwards;
+  }
+  .progress[data-percentage="31"] .progress-left .progress-bar {
+    animation: 0;
+  }
+  
+  .progress[data-percentage="32"] .progress-right .progress-bar {
+    animation: loading-32 0.5s linear forwards;
+  }
+  .progress[data-percentage="32"] .progress-left .progress-bar {
+    animation: 0;
+  }
+  
+  .progress[data-percentage="33"] .progress-right .progress-bar {
+    animation: loading-33 0.5s linear forwards;
+  }
+  .progress[data-percentage="33"] .progress-left .progress-bar {
+    animation: 0;
+  }
+  
+  .progress[data-percentage="34"] .progress-right .progress-bar {
+    animation: loading-34 0.5s linear forwards;
+  }
+  .progress[data-percentage="34"] .progress-left .progress-bar {
+    animation: 0;
+  }
+  
+  .progress[data-percentage="35"] .progress-right .progress-bar {
+    animation: loading-35 0.5s linear forwards;
+  }
+  .progress[data-percentage="35"] .progress-left .progress-bar {
+    animation: 0;
+  }
+  
+  .progress[data-percentage="36"] .progress-right .progress-bar {
+    animation: loading-36 0.5s linear forwards;
+  }
+  .progress[data-percentage="36"] .progress-left .progress-bar {
+    animation: 0;
+  }
+  
+  .progress[data-percentage="37"] .progress-right .progress-bar {
+    animation: loading-37 0.5s linear forwards;
+  }
+  .progress[data-percentage="37"] .progress-left .progress-bar {
+    animation: 0;
+  }
+  
+  .progress[data-percentage="38"] .progress-right .progress-bar {
+    animation: loading-38 0.5s linear forwards;
+  }
+  .progress[data-percentage="38"] .progress-left .progress-bar {
+    animation: 0;
+  }
+  
+  .progress[data-percentage="39"] .progress-right .progress-bar {
+    animation: loading-39 0.5s linear forwards;
+  }
+  .progress[data-percentage="39"] .progress-left .progress-bar {
+    animation: 0;
+  }
+  
+  .progress[data-percentage="40"] .progress-right .progress-bar {
+    animation: loading-40 0.5s linear forwards;
+  }
+  .progress[data-percentage="40"] .progress-left .progress-bar {
+    animation: 0;
+  }
+  
+  .progress[data-percentage="41"] .progress-right .progress-bar {
+    animation: loading-41 0.5s linear forwards;
+  }
+  .progress[data-percentage="41"] .progress-left .progress-bar {
+    animation: 0;
+  }
+  
+  .progress[data-percentage="42"] .progress-right .progress-bar {
+    animation: loading-42 0.5s linear forwards;
+  }
+  .progress[data-percentage="42"] .progress-left .progress-bar {
+    animation: 0;
+  }
+  
+  .progress[data-percentage="43"] .progress-right .progress-bar {
+    animation: loading-43 0.5s linear forwards;
+  }
+  .progress[data-percentage="43"] .progress-left .progress-bar {
+    animation: 0;
+  }
+  
+  .progress[data-percentage="44"] .progress-right .progress-bar {
+    animation: loading-44 0.5s linear forwards;
+  }
+  .progress[data-percentage="44"] .progress-left .progress-bar {
+    animation: 0;
+  }
+  
+  .progress[data-percentage="45"] .progress-right .progress-bar {
+    animation: loading-45 0.5s linear forwards;
+  }
+  .progress[data-percentage="45"] .progress-left .progress-bar {
+    animation: 0;
+  }
+  
+  .progress[data-percentage="46"] .progress-right .progress-bar {
+    animation: loading-46 0.5s linear forwards;
+  }
+  .progress[data-percentage="46"] .progress-left .progress-bar {
+    animation: 0;
+  }
+  
+  .progress[data-percentage="47"] .progress-right .progress-bar {
+    animation: loading-47 0.5s linear forwards;
+  }
+  .progress[data-percentage="47"] .progress-left .progress-bar {
+    animation: 0;
+  }
+  
+  .progress[data-percentage="48"] .progress-right .progress-bar {
+    animation: loading-48 0.5s linear forwards;
+  }
+  .progress[data-percentage="48"] .progress-left .progress-bar {
+    animation: 0;
+  }
+  
+  .progress[data-percentage="49"] .progress-right .progress-bar {
+    animation: loading-49 0.5s linear forwards;
+  }
+  .progress[data-percentage="49"] .progress-left .progress-bar {
+    animation: 0;
+  }
+  
+  .progress[data-percentage="50"] .progress-right .progress-bar {
+    animation: loading-50 0.5s linear forwards;
+  }
+  .progress[data-percentage="50"] .progress-left .progress-bar {
+    animation: 0;
+  }
+  
+  .progress[data-percentage="51"] .progress-right .progress-bar {
+    animation: loading-50 0.5s linear forwards;
+  }
+  .progress[data-percentage="51"] .progress-left .progress-bar {
+    animation: loading-1 0.5s linear forwards 0.5s;
+  }
+  
+  .progress[data-percentage="52"] .progress-right .progress-bar {
+    animation: loading-50 0.5s linear forwards;
+  }
+  .progress[data-percentage="52"] .progress-left .progress-bar {
+    animation: loading-2 0.5s linear forwards 0.5s;
+  }
+  
+  .progress[data-percentage="53"] .progress-right .progress-bar {
+    animation: loading-50 0.5s linear forwards;
+  }
+  .progress[data-percentage="53"] .progress-left .progress-bar {
+    animation: loading-3 0.5s linear forwards 0.5s;
+  }
+  
+  .progress[data-percentage="54"] .progress-right .progress-bar {
+    animation: loading-50 0.5s linear forwards;
+  }
+  .progress[data-percentage="54"] .progress-left .progress-bar {
+    animation: loading-4 0.5s linear forwards 0.5s;
+  }
+  
+  .progress[data-percentage="55"] .progress-right .progress-bar {
+    animation: loading-50 0.5s linear forwards;
+  }
+  .progress[data-percentage="55"] .progress-left .progress-bar {
+    animation: loading-5 0.5s linear forwards 0.5s;
+  }
+  
+  .progress[data-percentage="56"] .progress-right .progress-bar {
+    animation: loading-50 0.5s linear forwards;
+  }
+  .progress[data-percentage="56"] .progress-left .progress-bar {
+    animation: loading-6 0.5s linear forwards 0.5s;
+  }
+  
+  .progress[data-percentage="57"] .progress-right .progress-bar {
+    animation: loading-50 0.5s linear forwards;
+  }
+  .progress[data-percentage="57"] .progress-left .progress-bar {
+    animation: loading-7 0.5s linear forwards 0.5s;
+  }
+  
+  .progress[data-percentage="58"] .progress-right .progress-bar {
+    animation: loading-50 0.5s linear forwards;
+  }
+  .progress[data-percentage="58"] .progress-left .progress-bar {
+    animation: loading-8 0.5s linear forwards 0.5s;
+  }
+  
+  .progress[data-percentage="59"] .progress-right .progress-bar {
+    animation: loading-50 0.5s linear forwards;
+  }
+  .progress[data-percentage="59"] .progress-left .progress-bar {
+    animation: loading-9 0.5s linear forwards 0.5s;
+  }
+  
+  .progress[data-percentage="60"] .progress-right .progress-bar {
+    animation: loading-50 0.5s linear forwards;
+  }
+  .progress[data-percentage="60"] .progress-left .progress-bar {
+    animation: loading-10 0.5s linear forwards 0.5s;
+  }
+  
+  .progress[data-percentage="61"] .progress-right .progress-bar {
+    animation: loading-50 0.5s linear forwards;
+  }
+  .progress[data-percentage="61"] .progress-left .progress-bar {
+    animation: loading-11 0.5s linear forwards 0.5s;
+  }
+  
+  .progress[data-percentage="62"] .progress-right .progress-bar {
+    animation: loading-50 0.5s linear forwards;
+  }
+  .progress[data-percentage="62"] .progress-left .progress-bar {
+    animation: loading-12 0.5s linear forwards 0.5s;
+  }
+  
+  .progress[data-percentage="63"] .progress-right .progress-bar {
+    animation: loading-50 0.5s linear forwards;
+  }
+  .progress[data-percentage="63"] .progress-left .progress-bar {
+    animation: loading-13 0.5s linear forwards 0.5s;
+  }
+  
+  .progress[data-percentage="64"] .progress-right .progress-bar {
+    animation: loading-50 0.5s linear forwards;
+  }
+  .progress[data-percentage="64"] .progress-left .progress-bar {
+    animation: loading-14 0.5s linear forwards 0.5s;
+  }
+  
+  .progress[data-percentage="65"] .progress-right .progress-bar {
+    animation: loading-50 0.5s linear forwards;
+  }
+  .progress[data-percentage="65"] .progress-left .progress-bar {
+    animation: loading-15 0.5s linear forwards 0.5s;
+  }
+  
+  .progress[data-percentage="66"] .progress-right .progress-bar {
+    animation: loading-50 0.5s linear forwards;
+  }
+  .progress[data-percentage="66"] .progress-left .progress-bar {
+    animation: loading-16 0.5s linear forwards 0.5s;
+  }
+  
+  .progress[data-percentage="67"] .progress-right .progress-bar {
+    animation: loading-50 0.5s linear forwards;
+  }
+  .progress[data-percentage="67"] .progress-left .progress-bar {
+    animation: loading-17 0.5s linear forwards 0.5s;
+  }
+  
+  .progress[data-percentage="68"] .progress-right .progress-bar {
+    animation: loading-50 0.5s linear forwards;
+  }
+  .progress[data-percentage="68"] .progress-left .progress-bar {
+    animation: loading-18 0.5s linear forwards 0.5s;
+  }
+  
+  .progress[data-percentage="69"] .progress-right .progress-bar {
+    animation: loading-50 0.5s linear forwards;
+  }
+  .progress[data-percentage="69"] .progress-left .progress-bar {
+    animation: loading-19 0.5s linear forwards 0.5s;
+  }
+  
+  .progress[data-percentage="70"] .progress-right .progress-bar {
+    animation: loading-50 0.5s linear forwards;
+  }
+  .progress[data-percentage="70"] .progress-left .progress-bar {
+    animation: loading-20 0.5s linear forwards 0.5s;
+  }
+  
+  .progress[data-percentage="71"] .progress-right .progress-bar {
+    animation: loading-50 0.5s linear forwards;
+  }
+  .progress[data-percentage="71"] .progress-left .progress-bar {
+    animation: loading-21 0.5s linear forwards 0.5s;
+  }
+  
+  .progress[data-percentage="72"] .progress-right .progress-bar {
+    animation: loading-50 0.5s linear forwards;
+  }
+  .progress[data-percentage="72"] .progress-left .progress-bar {
+    animation: loading-22 0.5s linear forwards 0.5s;
+  }
+  
+  .progress[data-percentage="73"] .progress-right .progress-bar {
+    animation: loading-50 0.5s linear forwards;
+  }
+  .progress[data-percentage="73"] .progress-left .progress-bar {
+    animation: loading-23 0.5s linear forwards 0.5s;
+  }
+  
+  .progress[data-percentage="74"] .progress-right .progress-bar {
+    animation: loading-50 0.5s linear forwards;
+  }
+  .progress[data-percentage="74"] .progress-left .progress-bar {
+    animation: loading-24 0.5s linear forwards 0.5s;
+  }
+  
+  .progress[data-percentage="75"] .progress-right .progress-bar {
+    animation: loading-50 0.5s linear forwards;
+  }
+  .progress[data-percentage="75"] .progress-left .progress-bar {
+    animation: loading-25 0.5s linear forwards 0.5s;
+  }
+  
+  .progress[data-percentage="76"] .progress-right .progress-bar {
+    animation: loading-50 0.5s linear forwards;
+  }
+  .progress[data-percentage="76"] .progress-left .progress-bar {
+    animation: loading-26 0.5s linear forwards 0.5s;
+  }
+  
+  .progress[data-percentage="77"] .progress-right .progress-bar {
+    animation: loading-50 0.5s linear forwards;
+  }
+  .progress[data-percentage="77"] .progress-left .progress-bar {
+    animation: loading-27 0.5s linear forwards 0.5s;
+  }
+  
+  .progress[data-percentage="78"] .progress-right .progress-bar {
+    animation: loading-50 0.5s linear forwards;
+  }
+  .progress[data-percentage="78"] .progress-left .progress-bar {
+    animation: loading-28 0.5s linear forwards 0.5s;
+  }
+  
+  .progress[data-percentage="79"] .progress-right .progress-bar {
+    animation: loading-50 0.5s linear forwards;
+  }
+  .progress[data-percentage="79"] .progress-left .progress-bar {
+    animation: loading-29 0.5s linear forwards 0.5s;
+  }
+  
+  .progress[data-percentage="80"] .progress-right .progress-bar {
+    animation: loading-50 0.5s linear forwards;
+  }
+  .progress[data-percentage="80"] .progress-left .progress-bar {
+    animation: loading-30 0.5s linear forwards 0.5s;
+  }
+  
+  .progress[data-percentage="81"] .progress-right .progress-bar {
+    animation: loading-50 0.5s linear forwards;
+  }
+  .progress[data-percentage="81"] .progress-left .progress-bar {
+    animation: loading-31 0.5s linear forwards 0.5s;
+  }
+  
+  .progress[data-percentage="82"] .progress-right .progress-bar {
+    animation: loading-50 0.5s linear forwards;
+  }
+  .progress[data-percentage="82"] .progress-left .progress-bar {
+    animation: loading-32 0.5s linear forwards 0.5s;
+  }
+  
+  .progress[data-percentage="83"] .progress-right .progress-bar {
+    animation: loading-50 0.5s linear forwards;
+  }
+  .progress[data-percentage="83"] .progress-left .progress-bar {
+    animation: loading-33 0.5s linear forwards 0.5s;
+  }
+  
+  .progress[data-percentage="84"] .progress-right .progress-bar {
+    animation: loading-50 0.5s linear forwards;
+  }
+  .progress[data-percentage="84"] .progress-left .progress-bar {
+    animation: loading-34 0.5s linear forwards 0.5s;
+  }
+  
+  .progress[data-percentage="85"] .progress-right .progress-bar {
+    animation: loading-50 0.5s linear forwards;
+  }
+  .progress[data-percentage="85"] .progress-left .progress-bar {
+    animation: loading-35 0.5s linear forwards 0.5s;
+  }
+  
+  .progress[data-percentage="86"] .progress-right .progress-bar {
+    animation: loading-50 0.5s linear forwards;
+  }
+  .progress[data-percentage="86"] .progress-left .progress-bar {
+    animation: loading-36 0.5s linear forwards 0.5s;
+  }
+  
+  .progress[data-percentage="87"] .progress-right .progress-bar {
+    animation: loading-50 0.5s linear forwards;
+  }
+  .progress[data-percentage="87"] .progress-left .progress-bar {
+    animation: loading-37 0.5s linear forwards 0.5s;
+  }
+  
+  .progress[data-percentage="88"] .progress-right .progress-bar {
+    animation: loading-50 0.5s linear forwards;
+  }
+  .progress[data-percentage="88"] .progress-left .progress-bar {
+    animation: loading-38 0.5s linear forwards 0.5s;
+  }
+  
+  .progress[data-percentage="89"] .progress-right .progress-bar {
+    animation: loading-50 0.5s linear forwards;
+  }
+  .progress[data-percentage="89"] .progress-left .progress-bar {
+    animation: loading-39 0.5s linear forwards 0.5s;
+  }
+  
+  .progress[data-percentage="90"] .progress-right .progress-bar {
+    animation: loading-50 0.5s linear forwards;
+  }
+  .progress[data-percentage="90"] .progress-left .progress-bar {
+    animation: loading-40 0.5s linear forwards 0.5s;
+  }
+  
+  .progress[data-percentage="91"] .progress-right .progress-bar {
+    animation: loading-50 0.5s linear forwards;
+  }
+  .progress[data-percentage="91"] .progress-left .progress-bar {
+    animation: loading-41 0.5s linear forwards 0.5s;
+  }
+  
+  .progress[data-percentage="92"] .progress-right .progress-bar {
+    animation: loading-50 0.5s linear forwards;
+  }
+  .progress[data-percentage="92"] .progress-left .progress-bar {
+    animation: loading-42 0.5s linear forwards 0.5s;
+  }
+  
+  .progress[data-percentage="93"] .progress-right .progress-bar {
+    animation: loading-50 0.5s linear forwards;
+  }
+  .progress[data-percentage="93"] .progress-left .progress-bar {
+    animation: loading-43 0.5s linear forwards 0.5s;
+  }
+  
+  .progress[data-percentage="94"] .progress-right .progress-bar {
+    animation: loading-50 0.5s linear forwards;
+  }
+  .progress[data-percentage="94"] .progress-left .progress-bar {
+    animation: loading-44 0.5s linear forwards 0.5s;
+  }
+  
+  .progress[data-percentage="95"] .progress-right .progress-bar {
+    animation: loading-50 0.5s linear forwards;
+  }
+  .progress[data-percentage="95"] .progress-left .progress-bar {
+    animation: loading-45 0.5s linear forwards 0.5s;
+  }
+  
+  .progress[data-percentage="96"] .progress-right .progress-bar {
+    animation: loading-50 0.5s linear forwards;
+  }
+  .progress[data-percentage="96"] .progress-left .progress-bar {
+    animation: loading-46 0.5s linear forwards 0.5s;
+  }
+  
+  .progress[data-percentage="97"] .progress-right .progress-bar {
+    animation: loading-50 0.5s linear forwards;
+  }
+  .progress[data-percentage="97"] .progress-left .progress-bar {
+    animation: loading-47 0.5s linear forwards 0.5s;
+  }
+  
+  .progress[data-percentage="98"] .progress-right .progress-bar {
+    animation: loading-50 0.5s linear forwards;
+  }
+  .progress[data-percentage="98"] .progress-left .progress-bar {
+    animation: loading-48 0.5s linear forwards 0.5s;
+  }
+  
+  .progress[data-percentage="99"] .progress-right .progress-bar {
+    animation: loading-50 0.5s linear forwards;
+  }
+  .progress[data-percentage="99"] .progress-left .progress-bar {
+    animation: loading-49 0.5s linear forwards 0.5s;
+  }
+  
+  .progress[data-percentage="100"] .progress-right .progress-bar {
+    animation: loading-50 0.5s linear forwards;
+  }
+  .progress[data-percentage="100"] .progress-left .progress-bar {
+    animation: loading-50 0.5s linear forwards 0.5s;
+  }
+  
+  @keyframes loading-1 {
+    0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(3.6);
+      transform: rotate(3.6deg);
+    }
+  }
+  @keyframes loading-2 {
+    0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(7.2);
+      transform: rotate(7.2deg);
+    }
+  }
+  @keyframes loading-3 {
+    0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(10.8);
+      transform: rotate(10.8deg);
+    }
+  }
+  @keyframes loading-4 {
+    0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(14.4);
+      transform: rotate(14.4deg);
+    }
+  }
+  @keyframes loading-5 {
+    0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(18);
+      transform: rotate(18deg);
+    }
+  }
+  @keyframes loading-6 {
+    0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(21.6);
+      transform: rotate(21.6deg);
+    }
+  }
+  @keyframes loading-7 {
+    0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(25.2);
+      transform: rotate(25.2deg);
+    }
+  }
+  @keyframes loading-8 {
+    0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(28.8);
+      transform: rotate(28.8deg);
+    }
+  }
+  @keyframes loading-9 {
+    0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(32.4);
+      transform: rotate(32.4deg);
+    }
+  }
+  @keyframes loading-10 {
+    0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(36);
+      transform: rotate(36deg);
+    }
+  }
+  @keyframes loading-11 {
+    0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(39.6);
+      transform: rotate(39.6deg);
+    }
+  }
+  @keyframes loading-12 {
+    0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(43.2);
+      transform: rotate(43.2deg);
+    }
+  }
+  @keyframes loading-13 {
+    0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(46.8);
+      transform: rotate(46.8deg);
+    }
+  }
+  @keyframes loading-14 {
+    0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(50.4);
+      transform: rotate(50.4deg);
+    }
+  }
+  @keyframes loading-15 {
+    0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(54);
+      transform: rotate(54deg);
+    }
+  }
+  @keyframes loading-16 {
+    0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(57.6);
+      transform: rotate(57.6deg);
+    }
+  }
+  @keyframes loading-17 {
+    0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(61.2);
+      transform: rotate(61.2deg);
+    }
+  }
+  @keyframes loading-18 {
+    0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(64.8);
+      transform: rotate(64.8deg);
+    }
+  }
+  @keyframes loading-19 {
+    0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(68.4);
+      transform: rotate(68.4deg);
+    }
+  }
+  @keyframes loading-20 {
+    0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(72);
+      transform: rotate(72deg);
+    }
+  }
+  @keyframes loading-21 {
+    0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(75.6);
+      transform: rotate(75.6deg);
+    }
+  }
+  @keyframes loading-22 {
+    0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(79.2);
+      transform: rotate(79.2deg);
+    }
+  }
+  @keyframes loading-23 {
+    0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(82.8);
+      transform: rotate(82.8deg);
+    }
+  }
+  @keyframes loading-24 {
+    0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(86.4);
+      transform: rotate(86.4deg);
+    }
+  }
+  @keyframes loading-25 {
+    0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(90);
+      transform: rotate(90deg);
+    }
+  }
+  @keyframes loading-26 {
+    0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(93.6);
+      transform: rotate(93.6deg);
+    }
+  }
+  @keyframes loading-27 {
+    0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(97.2);
+      transform: rotate(97.2deg);
+    }
+  }
+  @keyframes loading-28 {
+    0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(100.8);
+      transform: rotate(100.8deg);
+    }
+  }
+  @keyframes loading-29 {
+    0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(104.4);
+      transform: rotate(104.4deg);
+    }
+  }
+  @keyframes loading-30 {
+    0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(108);
+      transform: rotate(108deg);
+    }
+  }
+  @keyframes loading-31 {
+    0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(111.6);
+      transform: rotate(111.6deg);
+    }
+  }
+  @keyframes loading-32 {
+    0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(115.2);
+      transform: rotate(115.2deg);
+    }
+  }
+  @keyframes loading-33 {
+    0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(118.8);
+      transform: rotate(118.8deg);
+    }
+  }
+  @keyframes loading-34 {
+    0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(122.4);
+      transform: rotate(122.4deg);
+    }
+  }
+  @keyframes loading-35 {
+    0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(126);
+      transform: rotate(126deg);
+    }
+  }
+  @keyframes loading-36 {
+    0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(129.6);
+      transform: rotate(129.6deg);
+    }
+  }
+  @keyframes loading-37 {
+    0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(133.2);
+      transform: rotate(133.2deg);
+    }
+  }
+  @keyframes loading-38 {
+    0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(136.8);
+      transform: rotate(136.8deg);
+    }
+  }
+  @keyframes loading-39 {
+    0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(140.4);
+      transform: rotate(140.4deg);
+    }
+  }
+  @keyframes loading-40 {
+    0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(144);
+      transform: rotate(144deg);
+    }
+  }
+  @keyframes loading-41 {
+    0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(147.6);
+      transform: rotate(147.6deg);
+    }
+  }
+  @keyframes loading-42 {
+    0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(151.2);
+      transform: rotate(151.2deg);
+    }
+  }
+  @keyframes loading-43 {
+    0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(154.8);
+      transform: rotate(154.8deg);
+    }
+  }
+  @keyframes loading-44 {
+    0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(158.4);
+      transform: rotate(158.4deg);
+    }
+  }
+  @keyframes loading-45 {
+    0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(162);
+      transform: rotate(162deg);
+    }
+  }
+  @keyframes loading-46 {
+    0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(165.6);
+      transform: rotate(165.6deg);
+    }
+  }
+  @keyframes loading-47 {
+    0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(169.2);
+      transform: rotate(169.2deg);
+    }
+  }
+  @keyframes loading-48 {
+    0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(172.8);
+      transform: rotate(172.8deg);
+    }
+  }
+  @keyframes loading-49 {
+    0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(176.4);
+      transform: rotate(176.4deg);
+    }
+  }
+  @keyframes loading-50 {
+    0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(180);
+      transform: rotate(180deg);
+    }
+  }
+  .sw-main {
+    position: relative;
+    display: block;
+    margin: 0;
+    padding: 0;
+    border-radius: .25rem !important
+  }
+
+.sw-main .sw-container {
+    display: block;
+    margin: 0;
+    padding: 0;
+    position: relative
+}
+
+.sw-main .step-content {
+    display: none;
+    position: relative;
+    margin: 0
+}
+
+.sw-main .sw-toolbar {
+    margin-left: 0
+}
+
+.sw-theme-default {
+    -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, .3);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, .3)
+}
+
+.sw-theme-default .sw-container {
+    min-height: 250px
+}
+
+.sw-theme-default .step-content {
+    padding: 10px;
+    border: 0 solid #d4d4d4;
+    background-color: #fff;
+    text-align: left
+}
+
+.sw-theme-default .sw-toolbar {
+    background: #f9f9f9;
+    border-radius: 0 !important;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding: 10px;
+    margin-bottom: 0 !important
+}
+
+.sw-theme-default .sw-toolbar-top {
+    border-bottom-color: #ddd !important
+}
+
+.sw-theme-default .sw-toolbar-bottom {
+    border-top-color: #ddd !important
+}
+
+.sw-theme-default>ul.step-anchor>li {
+    position: relative;
+    margin-right: 2px
+}
+
+.sw-theme-default>ul.step-anchor>li>a,
+.sw-theme-default>ul.step-anchor>li>a:hover {
+    border: none !important;
+    color: #bbb;
+    text-decoration: none;
+    outline-style: none;
+    background: 0 0 !important;
+    border: none !important;
+    cursor: not-allowed
+}
+
+.sw-theme-default>ul.step-anchor>li.clickable>a:hover {
+    color: #4285f4 !important;
+    background: 0 0 !important;
+    cursor: pointer
+}
+
+.sw-theme-default>ul.step-anchor>li>a::after {
+    content: "";
+    background: #4285f4;
+    height: 2px;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    -webkit-transition: all 250ms ease 0s;
+    transition: all 250ms ease 0s;
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0)
+}
+
+.sw-theme-default>ul.step-anchor>li.active>a {
+    border: none !important;
+    color: #4285f4 !important;
+    background: 0 0 !important;
+    cursor: pointer
+}
+
+.sw-theme-default>ul.step-anchor>li.active>a::after {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1)
+}
+
+.sw-theme-default>ul.step-anchor>li.done>a {
+    border: none !important;
+    color: #000 !important;
+    background: 0 0 !important;
+    cursor: pointer
+}
+
+.sw-theme-default>ul.step-anchor>li.done>a::after {
+    background: #5cb85c;
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1)
+}
+
+.sw-theme-default>ul.step-anchor>li.danger>a {
+    border: none !important;
+    color: #d9534f !important;
+    cursor: pointer
+}
+
+.sw-theme-default>ul.step-anchor>li.danger>a::after {
+    background: #d9534f;
+    border-left-color: #f8d7da;
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1)
+}
+
+.sw-theme-default>ul.step-anchor>li.disabled>a,
+.sw-theme-default>ul.step-anchor>li.disabled>a:hover {
+    color: #eee !important;
+    cursor: not-allowed
+}
+
+@media screen and (max-width:768px) {
+    .sw-theme-default>.nav-tabs>li {
+        float: none !important
+    }
+}
+
+.sw-loading::after {
+    position: absolute;
+    display: block;
+    opacity: 1;
+    content: "";
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(255, 255, 255, .7);
+    -webkit-transition: all .2s ease;
+    transition: all .2s ease;
+    z-index: 2
+}
+
+.sw-loading::before {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 10;
+    border: 10px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 10px solid #3498db;
+    width: 80px;
+    height: 80px;
+    margin-top: -40px;
+    margin-left: -40px;
+    -webkit-animation: spin 1s linear infinite;
+    animation: spin 1s linear infinite
+}
+
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform: rotate(0)
+    }
+    100% {
+        -webkit-transform: rotate(360deg)
+    }
+}
+
+@keyframes spin {
+    0% {
+        -webkit-transform: rotate(0);
+        transform: rotate(0)
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg)
+    }
+}
+.sw-theme-arrows>ul.step-anchor>li>a:after {
+  content: " ";
+  display: block;
+  width: 0;
+  height: 0;
+  border-top: 50px solid transparent;
+  border-bottom: 50px solid transparent;
+  border-left: 30px solid #f5f5f5;
+  position: absolute;
+  top: 50%;
+  margin-top: -50px;
+  left: 100%;
+  z-index: 2;
+}
+.sw-theme-arrows>ul.step-anchor {
+  position: relative;
+}
+.sw-theme-arrows>ul.step-anchor>li>a:before {
+  content: " ";
+  display: block; 
+  width: 0;
+  height: 0;
+  border-top: 50px solid transparent;
+  border-bottom: 50px solid transparent;
+  border-left: 30px solid #ddd;
+  position: absolute;
+  top: 50%;
+  margin-top: -50px;
+  margin-left: 1px;
+  left: 100%;
+  z-index: 1;
+}
+.nav-tabs .nav-item {
+  position: relative;
+}
+.sw-theme-arrows>ul.step-anchor {
+  border: 0;
+  border-bottom: 1px solid #ddd;
+  padding: 0;
+  background: #f5f5f5;
+  border-radius: 0;
+  border-top-right-radius: 5px;
+  list-style: none; 
+  overflow: hidden;
+}
+ .nav-tabs .nav-link { 
+  border-top-left-radius: 0 !important;
+ border-top-right-radius: 0 !important;
+}
+.sw-main ul li{
+  width: 20%; 
+}
+.sw-theme-arrows>ul.step-anchor>li>a, .sw-theme-arrows>ul.step-anchor>li>a:hover {
+  padding-left: 46px;
+}
+.sw-theme-arrows>ul.step-anchor>li.active>a {
+  color: #fff;
+}
+.ngx-material-timepicker-toggle{
+    position: absolute;
+    right: 1px;
+    top: 4px;
+}
+.ngx-material-timepicker-toggle svg{
+   color: #ddd;
+   width: 20px;
+
+}
+.toggle-example{
+  position: relative;
+}
+.timepicker__header{
+  background-color: #43d39e !important;
+}
+.clock-face__number> span.active {
+  background-color:  #43d39e !important;
+}
+.clock-face__clock-hand {
+  background-color:#43d39e !important;
+}
+.timepicker-button {
+  color: #43d39e !important;
+}
+.mat-form-field-flex {
+  border: 1px solid #e2e7f1 !important;
+  border-radius: .25rem !important;
+}
+.mat-form-field-flex {
+  display: inline-flex;
+  align-items: center;
+  width: 100%; 
+}
+.mat-form-field-appearance-legacy .mat-form-field-underline {
+  opacity: 0 !important;
+}
+.mat-form-field-infix {
+  padding: .375rem .75rem !important;
+}
+.mat-form-field-infix {
+  border-top: 0 !important;
+}
+.mat-form-field-flex {
+  display: inline-flex !important;
+  align-items: center !important; 
+  width: 100%;
+  height: 35px !important;
+}
+
+.form-field .join-field select {
+border: none;
+border-left: 1px solid #c2acac;
+border-radius: 0;
+}
+
+.mat-form-field {
+  width: 100%;
+}
+.mat-form-field-appearance-legacy .mat-form-field-wrapper {
+  padding-bottom: 0 !important;
+}
+.list-quiz .list-quiz-badge {
+  border-radius: 50%!important;
+  padding: 0;
+  display: inline-flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  line-height: 2rem;
+  font-size: 1rem;
+  border: 1px solid #e9edf2;
+  color: #272c33;
+}
+.list-quiz .list-quiz-text {
+  margin-left: .625rem; 
+  padding: 3px 6px;
+  display: inline-block;
+}
+.lst-1{
+  position: relative;
+  margin-top: 20px;
+} 
+.lst-1 ul{
+  list-style: none;
+}
+.lst-1 ul li{
+  margin-bottom: 15px;
+}
+.quiz-option{
+  position: relative;
+  padding: 12px;
+}
+.quiz-option ul{ 
+  list-style: none;
+  padding-left: 0px;
+  padding-bottom: 0;
+}
+.quiz-option ul li{
+  display: inline-block;
+  width: 14%;
+  margin: 9px;
+  cursor: pointer;
+  list-style: none;
+}
+.bg-primary {
+  background-color: #002b46!important;
+}
+.quiz-option ul li .quiz-bt{
+  border: 1px solid #dddd;
+  border-radius: 4px;
+  padding: 4px; 
+  text-align: center;
+}
+.quiz-rule{
+  position: relative;
+  padding: 15px;
+}
+.quiz-rule ul{
+  list-style: none;
+    padding-left: 0;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+.quiz-rule ul li{
+  display: inline-block;
+  display: inline-flex;
+}
+.quiz-rule ul li:nth-child(2n+1){
+  position: relative;
+  width: 47%;
+}
+.quiz-rule ul li:nth-child(2n+2){
+  position: relative;
+  width: 47%;
+}
+.sky{
+  position: relative;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-top: 5px;
+  margin-right: 6px;
+  background-color: #98e7eb;
+}
+.s-circle{
+  position: relative;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-top: 5px;
+  margin-right: 6px;
+  border: 1px solid #ddd;
+}
+.s-voi{
+  position: relative;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-top: 5px;
+  margin-right: 6px;
+  background-color: #ba43b6;
+}
+.s-skip{
+  position: relative;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-top: 5px; 
+  margin-right: 6px;
+  background-color: #ddd;
+}
+.min-height-quiz{
+  min-height: 415px;
+}
+.padd-550{
+  height: 550px;
+}
+.mat-checkbox-layout {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: inherit;
+  align-items: baseline;
+  vertical-align: inherit !important;
+  display: inherit !important;
+  white-space: nowrap;
+}
+.profile-view-ed-info{
+  position: relative;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.profile-view-ed-info ul{
+  list-style: none;
+  padding-left: 0;
+}
+.profile-view-ed-info ul li{
+   display: inline-block
+}
+
+.profile-view-ed-info ul li:nth-child(2n+1){
+  width: 48%;
+}
+.profile-view-ed-info ul li:nth-child(2n+2){
+  width: 48%;
+  float: right;
+}

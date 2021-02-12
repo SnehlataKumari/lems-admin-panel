@@ -1,0 +1,148 @@
+
+<div class="left-side-menu">
+<div class="media user-profile mt-2 mb-2">
+    <img src="assets/images/users/avatar-10.jpg" class="avatar-sm rounded-circle mr-2" alt="" />
+    <img src="assets/images/users/avatar-10.jpg" class="avatar-xs rounded-circle mr-2" alt="" />
+
+    <div class="media-body">
+        <h6 class="pro-user-name mt-0 mb-0">jkjkjkjkjk</h6>
+        <span class="pro-user-desc">Admin</span>
+    </div>
+    <div class="dropdown align-self-center profile-dropdown-menu">
+        <a class="dropdown-toggle mr-0" data-toggle="dropdown"  role="button" aria-haspopup="false"
+            aria-expanded="false">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        </a>
+        <div class="dropdown-menu profile-dropdown">
+            <a class="dropdown-item notify-item pointer">
+                <i data-feather="user" class="icon-dual icon-xs mr-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user icon-dual icon-xs mr-2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                </i>
+                <span>My Account</span>
+            </a>
+            <div class="dropdown-divider"></div>
+            <a (click)="onLogout()" class="dropdown-item notify-item">
+                <i data-feather="log-out" class="icon-dual icon-xs mr-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-log-out icon-dual icon-xs mr-2"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg>
+                </i>
+                <span>Logout</span>
+            </a>
+        </div>
+    </div>
+</div>
+<div class="sidebar-content">
+    <!--- Sidemenu -->
+    <div id="sidebar-menu" class="sidebar-menu slimscroll-menu">
+        <ul class="metismenu" id="menu-bar">
+            <li class="menu-title">Navigation</li>
+            <li id="dashboardNav">
+                <a routerLink="/home/dashboard">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-home"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+                    <!-- <span class="badge badge-success float-right">1</span> -->
+                    <span> Dashboard </span>
+                </a>
+            </li>
+            <li class="pcoded-hasmenu">
+                <a href="javascript: void(0);" id="testmangNav">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-users align-self-center icon-dual icon-lg"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                    <span> Test Manager </span>
+                    <span class="menu-arrow"></span>
+                </a>
+                <ul class="nav-second-level pcoded-submenu">
+                    <li id="testNav">
+                        <a routerLink="/home/test">Test</a>
+                    </li>
+                      <li id="testreqNav">
+                        <a routerLink="/home/test-request">Test Request</a>
+                      </li>
+                    <li id="importedNav">
+                        <a routerLink="/home/imported-file">Imorted File</a>
+                    </li>
+                    
+                </ul>
+            </li>
+            <li class="pcoded-hasmenu">
+                <a href="javascript: void(0);" id="candidateNav">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-users align-self-center icon-dual icon-lg"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                    <span> Candidate </span>
+                    <span class="menu-arrow"></span>
+                </a>
+                <ul class="nav-second-level pcoded-submenu">
+                    <li id="ccandidateNav">
+                        <a routerLink="/candidate/candidate">Candidate</a>
+                    </li>
+                    <li id="groupNav">
+                        <a routerLink="/candidate/group">Group</a>
+                    </li>
+                    <li id="importNav">
+                        <a routerLink="/candidate/candidate-import-data">Import Data</a>
+                    </li> 
+                    <li id="documentNav">
+                        <a routerLink="/candidate/document">Documents</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="pcoded-hasmenu">
+                <a href="javascript: void(0);" id="teacherNav">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-bookmark"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path></svg>
+                    <span> Teacher </span>
+                    <span class="menu-arrow"></span>
+                </a>
+                <ul class="nav-second-level pcoded-submenu">
+                    <li id="addteacherNav">
+                        <a routerLink="/teacher/add-teacher">Add Teacher</a>
+                    </li>
+                    <li id="regreqNav">
+                        <a routerLink="/teacher/registartion-requestion">Registration Request</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="pcoded-hasmenu">
+                <a href="javascript: void(0);" id="productNav">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-briefcase"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>   
+                    <span> Product </span>
+                    <span class="menu-arrow"></span>
+                </a>
+                <ul class="nav-second-level pcoded-submenu">
+                    <li id="pproducNav">
+                        <a routerLink="/product/product">Product</a>
+                    </li>
+                    <li id="requestNav">
+                        <a routerLink="/product/live-class-request">Live Classes Request</a>
+                    </li>
+                    <!-- <li id="paymentNav">
+                        <a routerLink="/product/live-stream">Payment </a>
+                    </li>
+                    <li id="plinkNav">
+                        <a routerLink="/product/product">Product Link</a>
+                    </li> -->
+                    <li id="liveNav">
+                        <a routerLink="/product/live-stream">Live Stream Class </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="pcoded-hasmenu">
+                <a href="javascript: void(0);" id="reportNav">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-package"><line x1="16.5" y1="9.4" x2="7.5" y2="4.21"></line><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>  
+                    <span> Report </span>
+                    <span class="menu-arrow"></span>
+                </a>
+                <ul class="nav-second-level pcoded-submenu">
+                    <li id="testrNav">
+                        <a routerLink="/report/test-report">Test Report</a>
+                    </li>
+                    <li id="teacherrNav">
+                        <a routerLink="/report/teacher-report">Teacher Report </a>
+                    </li>
+                    <li id="salesrNav">
+                        <a routerLink="/report/sales-report">Sales Report</a>
+                    </li>
+                </ul>
+            </li>
+        </ul> 
+    </div>
+    <!-- End Sidebar -->
+    <div class="clearfix"></div>
+</div>
+<!-- Sidebar -left -->
+</div>

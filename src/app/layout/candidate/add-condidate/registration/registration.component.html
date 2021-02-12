@@ -1,0 +1,75 @@
+<form class="authentication-form authentication-form1" (ngSubmit)="onSubmit()" [formGroup]="userRegistrationForm">
+    <div class="form-group">
+        <label class="form-control-label">Name</label>
+        <div class="input-group input-group-merge">
+            <div class="input-group-prepend">
+                <span class="input-group-text">
+                    <img src="assets/images/icon/name.svg" width="20px" height="20px">
+                </span>
+            </div>
+            <input type="name" formControlName="firstName" class="form-control" id="name" placeholder="Enter Name">
+        </div>
+        <show-errors [control]="userRegistrationForm.get('firstName')"></show-errors>
+    </div>
+    <div class="form-group mt-4">
+        <label class="form-control-label">Email Address</label>
+        <div class="input-group input-group-merge">
+            <div class="input-group-prepend">
+                <span class="input-group-text">
+                    <img src="assets/images/icon/mail.svg" width="20px" height="20px">
+                </span>
+            </div>
+            <input type="email" formControlName="email" class="form-control" id="email"
+                placeholder="Enter E-amil Addresss">
+        </div>
+        <show-errors [control]="userRegistrationForm.get('email')"></show-errors>
+    </div>
+
+    <app-custom-password *ngIf="!studentId" label="Password" formControlName="password" placeholder="Enter Password"></app-custom-password>
+    <show-errors [control]="userRegistrationForm.get('password')"></show-errors>
+    <app-custom-password *ngIf="!studentId" label="Confirm Password" formControlName="confirmPassword" placeholder="Enter Confirm Password">
+    </app-custom-password>
+    <show-errors [control]="userRegistrationForm.get('confirmPassword')"></show-errors>
+    <div class="form-group mt-4">
+        <label class="form-control-label">Select Grade/Group/Course</label>
+        <div class="styled-select input-group input-group-merge">
+            <div class="input-group-prepend">
+                <span class="input-group-text">
+                    <img src="assets/images/icon/course.svg" width="20px" height="20px">
+                </span>
+            </div>
+            <select formControlName="grade" class="minimal form-control">
+                <option>Select Grade/Group/Course</option>
+                <option>Choose</option>
+            </select>
+        </div>
+        <show-errors [control]="userRegistrationForm.get('grade')"></show-errors>
+    </div>
+    <div class="form-group mt-4">
+        <label class="form-control-label">Phone Number</label>
+        <div class="input-group input-group-merge">
+            <div class="input-group-prepend">
+                <span class="input-group-text">
+                    <img src="assets/images/icon/mobile.svg" width="20px" height="20px">
+                </span>
+            </div>
+            <select class="minimal form-control phon-abs">
+                <option>+91</option>
+            </select>
+            <input type="number" formControlName="phone" class="form-control pad-97" placeholder="9865443333">
+
+        </div>
+          <show-errors [control]="userRegistrationForm.get('phone')"></show-errors>
+          <small *ngIf="userRegistrationForm.get('phone').hasError('pattern') && userRegistrationForm.get('phone').touched"
+            id="passwordHelpBlock" class="form-text text-danger">
+            Phone number must be 10 digits
+          </small>
+    </div>
+
+    <div class="mt-4 form-group mb-0 text-center">
+        <button [disabled]="userRegistrationForm.invalid" class="btn  btn-block btn-filled form-btn">
+            <span *ngIf="!studentId">Create Candidate</span>
+            <span *ngIf="studentId">Update Candidate</span>
+        </button>
+    </div>
+</form>

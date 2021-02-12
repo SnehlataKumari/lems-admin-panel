@@ -1,0 +1,246 @@
+<app-header></app-header>
+<app-sidebar></app-sidebar>
+<div id="registrationPage"></div>
+<div class="content-page">
+    <div class="content">
+        
+        <!-- Start Content-->
+        <div class="container-fluid">
+            <div class="row page-title mt-2 d-print-none">
+                <div class="col-md-12">
+                    <nav aria-label="breadcrumb" class="float-right mt-1">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a class="fw-600">Teacher</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Registration Request</li>
+                        </ol>
+                    </nav>
+                    <h4 class="mb-1 mt-0">Registration Request</h4>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="row m-b-30">
+                                 <div class="offset-md-9 col-md-3">
+                                      <input type="text"  (keyup)="applyFilter($event)" class="form-control" placeholder="Search">
+                                 </div>
+                            </div>
+                            <div class="mt-4 mat-elevation-z8 table-responsive">
+                                <table mat-table [dataSource]="dataSource" class="table">
+                              
+                                  <!-- Position Column -->
+                                  <!-- <ng-container matColumnDef="id">
+                                    <th mat-header-cell *matHeaderCellDef>
+                                       <div class="custom-control custom-checkbox mb-2">
+                                      <input type="checkbox" class="custom-control-input" id="customCheck1">
+                                      <label class="custom-control-label" for="customCheck1">Sr. No.</label>
+                                      </div> 
+                                </th>
+                                    <td mat-cell *matCellDef="let element"> 
+                                      <div class="custom-control custom-checkbox mb-2">
+                                        <input type="checkbox" class="custom-control-input" id="customCheck1">
+                                        <label class="custom-control-label" for="customCheck1">{{element.id}}.</label>
+                                        </div> 
+                                       </td>
+                                  </ng-container> -->
+                              
+                                  <!-- Name Column -->
+                                  <ng-container matColumnDef="name">
+                                    <th mat-header-cell *matHeaderCellDef>Teacher Name</th>
+                                    <td mat-cell *matCellDef="let element"> {{element.userId.firstName}} {{element.userId.lastName}} </td>
+                                  </ng-container>
+                               
+                                  <!-- Weight Column -->
+                                  <ng-container matColumnDef="email">
+                                    <th mat-header-cell *matHeaderCellDef>Email Id</th>
+                                        <td mat-cell *matCellDef="let element"> {{element.userId.email}} </td>
+                                  </ng-container>
+                              
+                                  <!-- Symbol Column -->
+                                  <ng-container matColumnDef="phone">
+                                    <th mat-header-cell *matHeaderCellDef>Phone No</th>
+                                    <td mat-cell *matCellDef="let element"> {{element.userId.phone}} </td>
+                                  </ng-container>
+
+                                  <ng-container matColumnDef="highestQualification">
+                                    <th mat-header-cell *matHeaderCellDef>Qualification</th>
+                                    <td mat-cell *matCellDef="let element"> {{element.highestQualification}} </td>
+                                  </ng-container>
+ 
+                                  <ng-container matColumnDef="createdAt">
+                                    <th mat-header-cell *matHeaderCellDef>Registration Date</th>
+                                    <td mat-cell *matCellDef="let element"> {{element.createdAt | date}} </td>
+                                  </ng-container>
+                                  <ng-container matColumnDef="location">
+                                    <th mat-header-cell *matHeaderCellDef>Address</th>
+                                    <td mat-cell *matCellDef="let element"> {{element.location}} </td>
+                                  </ng-container>
+ 
+                                  <ng-container matColumnDef="assign">
+                                    <th mat-header-cell *matHeaderCellDef>Accept Request</th>
+                                    <td mat-cell *matCellDef="let element">
+                                      <div class="d-flex">
+                                        <button
+                                          [disabled]="element.hasAcceptedRegistrationRequest === true"
+                                          (click)="onAcceptTeacher(element)" class="btn btn-success mr-2 btn-sm">Accept</button> 
+                                        <button
+                                          [disabled]="element.hasAcceptedRegistrationRequest === false"
+                                          (click)="onRejectTeacher(element)" class="btn btn-danger btn-sm mr-2"> Reject </button>
+                                        <button
+                                          (click)="setSelectedTeacher(element)"
+                                        class="btn btn-warning btn-sm" data-target="#view" data-toggle="modal"> View </button>
+                                      </div>
+                                    </td>
+                                  </ng-container>
+ 
+                                  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                                  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                                </table>
+                                <div *ngIf="!dataSource">
+                                  <h1>Fetching rows....</h1>
+                                </div>
+                              
+                                <mat-paginator [pageSizeOptions]="[10, 20, 50]" showFirstLastButtons></mat-paginator>
+                              </div>
+                        </div>
+                    </div>
+                </div> <!-- end col -->
+            </div>
+            <!-- end row -->
+        </div> <!-- container-fluid -->
+
+    </div> <!-- content -->
+
+</div>
+
+<div id="delete-modal" class="modal fade" role="dialog">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-body text-center">
+        <div class="row">
+          <div class="col-md-12">
+            <i class="text-danger fs-34 d-inline-block uil uil-trash-alt mb-2"></i>
+            <h6>Are you sure want to delete?</h6>
+          </div>
+        </div>
+        <hr />
+        <div class="row m-t-15">
+          <div class="col-sm-12">
+            <button type="button" class="btn btn-sm btn-success mr-1" data-target="#delete-sccess-modal" data-toggle="modal" data-dismiss="modal">Delete</button>
+            <button type="button" class="btn btn-sm btn-danger ml-1" data-dismiss="modal">Cancel</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="view">
+    <div class="modal-dialog modal-md">
+      <form>
+        <div class="modal-content">
+            <div class="modal-header">
+                <h6 class="modal-title">View Requested Teacher</h6>
+                <!-- <button type="button" class="close" data-dismiss="modal">&times;</button> -->
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h6 class="fw-600">Full Name</h6>
+                        <p>{{selectedTeacher?.userId?.firstName}} {{selectedTeacher?.userId?.lastName}}</p>
+                    </div>
+                    <div class="col-md-6">
+                        <h6 class="fw-600">Gender</h6>
+                        <p>{{selectedTeacher?.userId?.gender}}</p>
+                     </div>
+                     <div class="col-md-6">
+                        <h6 class="fw-600">Email Id </h6>
+                        <p>{{selectedTeacher?.userId?.email}}</p>
+                     </div>
+                     <div class="col-md-6">
+                        <h6 class="fw-600">Phone</h6>
+                        <p>{{selectedTeacher?.userId?.phone}}</p>
+                     </div>
+                     <div class="col-md-6">
+                        <h6 class="fw-600">Highest Qualification</h6>
+                        <p>{{selectedTeacher?.highestQualification}}</p>
+                    </div>
+                    <div class="col-md-6">
+                      <h6 class="fw-600">Specialization along with your college details</h6>
+                      <p>{{selectedTeacher?.collegeDetails}}</p>
+                    </div>
+                    <div class="col-md-6">
+                      <h6 class="fw-600">Year of experience in teaching</h6>
+                      <p>{{selectedTeacher?.teachingExperience}}</p>
+                    </div>
+                    <!-- TODO:SHOWING OBJECT OBJECT -->
+                    <div class="col-md-6">
+                      <h6 class="fw-600">Primary subject of teaching</h6>
+                      <p>{{getTrueValues(selectedTeacher?.primaryTeachingSubjects)}}</p>
+                    </div>
+                    <div class="col-md-6">
+                      <h6 class="fw-600">Secondary subject of teaching (if any)</h6>
+                      <p>{{getTrueValues(selectedTeacher?.secondaryTeachingSubjects)}}</p>
+                    </div>
+                    <div class="col-md-6">
+                      <h6 class="fw-600">Kindly Mark which grade students you would love to teach</h6>
+                      <p>{{getTrueValues(selectedTeacher?.gradeToTeach)}}</p>
+                    </div>
+                    <div class="col-md-6">
+                      <h6 class="fw-600">Hours you will be available per day for teaching</h6>
+                      <p><span>Week Days : {{selectedTeacher?.teachingHours?.weekdays}}</span></p>
+                      <p><span>Weekends : {{selectedTeacher?.teachingHours?.weekends}}</span></p>
+                    </div>
+                    <div class="col-md-6">
+                      <h6 class="fw-600">Available Timings</h6>
+                      <p>{{getTrueValues(selectedTeacher?.availableTimes)}}</p>
+                    </div>
+                    <div class="col-md-6">
+                      <h6 class="fw-600">Current Occupation</h6>
+                      <p>{{selectedTeacher?.currentOccupation}}</p>
+                    </div>
+                    <!-- TODO:Date of birth is not showing -->
+                    <div class="col-md-6">
+                      <h6 class="fw-600">Date of birth</h6>
+                      <p>{{selectedTeacher?.dateOfBirth | date}}</p>
+                    </div>
+                    <!-- TODO: NOT SHOWING -->
+                    <div class="col-md-6">
+                      <h6 class="fw-600">Type of internet connection </h6>
+                      <p>{{selectedTeacher?.typeOfInternetConnection}}</p>
+                    </div>
+                    <!-- TODO: NOT SHOWING -->
+                    <div class="col-md-6">
+                      <h6 class="fw-600">Download speed of your internet Connection </h6>
+                      <p>{{selectedTeacher?.downloadSpeed}}</p>
+                    </div>
+                    <div class="col-md-6">
+                      <h6 class="fw-600">Upload speed of your internet Connection </h6>
+                      <p>{{selectedTeacher?.uploadSpeed}}</p>
+                    </div>
+                    <div class="col-md-6" *ngIf="selectedTeacher?.screenShotOfInternet[0]">
+                      <h6 class="fw-600">Screen short of your internet connection </h6>
+                      <a target="_blank" href="{{hostUrl}}/documents/{{selectedTeacher?.screenShotOfInternet[0].filename}}">Open</a>
+                    </div>
+                    <div class="col-md-6">
+                      <h6 class="fw-600">You association with LEMS Academy is for  </h6>
+                      <p>{{selectedTeacher?.associationWithLems}}</p>
+                    </div>
+                    <div class="col-md-6">
+                      <h6 class="fw-600">Your Location </h6>
+                      <p>{{selectedTeacher?.location}}</p>
+                    </div>
+                    <div class="col-md-6">
+                      <h6 class="fw-600">How did you come to know about LEMS Academy </h6>
+                      <p>{{selectedTeacher?.howKnowLemsAcademy}}</p>
+                    </div>
+                    <div class="col-md-6" *ngIf="selectedTeacher?.resume[0]">
+                      <h6 class="fw-600">Resume </h6>
+                      <a target="_blank" href="{{hostUrl}}/documents/{{selectedTeacher?.resume[0].filename}}">Open</a>
+                    </div>
+                </div>  
+            </div>
+        </div>
+      </form>
+    </div>
+  </div>

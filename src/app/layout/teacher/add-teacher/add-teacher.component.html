@@ -1,0 +1,194 @@
+<app-header></app-header>
+<app-sidebar></app-sidebar>
+<div id="addteacherPage"></div>
+<div class="content-page">
+    <div class="content">
+        
+        <!-- Start Content-->
+        <div class="container-fluid">
+            <div class="row page-title mt-2 d-print-none">
+                <div class="col-md-12">
+                    <nav aria-label="breadcrumb" class="float-right mt-1">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a class="fw-600">Teacher</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Add Teacher</li>
+                        </ol>
+                    </nav>
+                    <h4 class="mb-1 mt-0">Add Teacher</h4>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-body">
+                           <div class="row m-b-20">
+                               <div class="col-md-3">
+                                   <!-- <select class="form-control">
+                                       <option>Select Filter</option>
+                                       <option>Test Name</option>
+                                       <option>Test Category</option>
+                                   </select>  -->
+                               </div>
+                               <div class="offset-md-4 col-md-5">
+                                   <div class="float-right">
+                                    <button routerLink="/teacher/add-new-teacher" class="btn btn-primary btn-sm"><i class="uil-plus-circle"></i> Add New Teacher</button>
+                                   </div>
+                                </div>
+                           </div>
+                            <div class="row m-b-30">
+                                 <div class="offset-md-9 col-md-3">
+                                      <input type="text"  (keyup)="applyFilter($event)" class="form-control" placeholder="Search">
+                                 </div>
+                            </div>
+                            <div class="mt-4 mat-elevation-z8 table-responsive">
+                                <table mat-table [dataSource]="dataSource" class="table" *ngIf="dataSource">
+                              
+                                  <!-- Position Column -->
+                                  <!-- <ng-container matColumnDef="id">
+                                    <th mat-header-cell *matHeaderCellDef>
+                                       <div class="custom-control custom-checkbox mb-2">
+                                      <input type="checkbox" class="custom-control-input" id="customCheck1">
+                                      <label class="custom-control-label" for="customCheck1">Sr. No.</label>
+                                      </div> 
+                                    </th>
+                                    <td mat-cell *matCellDef="let element"> 
+                                      <div class="custom-control custom-checkbox mb-2">
+                                        <input type="checkbox" class="custom-control-input" id="customCheck1">
+                                        <label class="custom-control-label" for="customCheck1">{{element.id}}.</label>
+                                        </div> 
+                                       </td>
+                                  </ng-container> -->
+                              
+                                  <!-- Name Column -->
+                                  <ng-container matColumnDef="name">
+                                    <th mat-header-cell *matHeaderCellDef>Teacher Name</th>
+                                    <td mat-cell *matCellDef="let element"> {{element.userId.firstName}} {{element.userId.lastName}}</td>
+                                  </ng-container>
+                               
+                                  <!-- Weight Column -->
+                                  <ng-container matColumnDef="email">
+                                    <th mat-header-cell *matHeaderCellDef>Email Id</th>
+                                        <td mat-cell *matCellDef="let element"> {{element.userId.email}} </td>
+                                  </ng-container>
+                              
+                                  <!-- Symbol Column -->
+                                   <ng-container matColumnDef="phone">
+                                    <th mat-header-cell *matHeaderCellDef>Phone No</th>
+                                    <td mat-cell *matCellDef="let element"> {{element.userId.phone}} </td>
+                                  </ng-container>
+
+                                  <!-- <ng-container matColumnDef="sname">
+                                    <th mat-header-cell *matHeaderCellDef>Group Assigned/Count</th>
+                                    <td mat-cell *matCellDef="let element"> {{element.sname}} </td>
+                                  </ng-container> -->
+ 
+                                  <ng-container matColumnDef="registrationDate">
+                                    <th mat-header-cell *matHeaderCellDef>Registration Date</th>
+                                    <td mat-cell *matCellDef="let element"> {{element.createdAt | date}} </td>
+                                  </ng-container> -->
+ 
+                                  <ng-container matColumnDef="assign">
+                                    <th mat-header-cell *matHeaderCellDef>Action</th>
+                                    <td mat-cell *matCellDef="let element">
+                                      <div class="d-flex">
+                                        <button (click)="setSelectedTeacher(element._id)" class="btn btn-warning mr-2 btn-sm" data-target="#profile-modal" data-toggle="modal"><i  class="uil-eye mr-2"></i> View </button>
+                                        <button (click)="setSelectedTeacher(element._id)" class="btn btn-danger mr-2 btn-sm" data-target="#delete-modal" data-toggle="modal"><i  class="uil-trash mr-2"></i> Delete </button>
+                                        <button (click)="setSelectedUserId(element.userId._id)" class="btn btn-success mr-2 btn-sm" data-target="#change-password" data-toggle="modal"><i  class="uil-lock-access mr-2"></i>Password </button>
+                                        <button [routerLink]="'/teacher/edit-teacher/'+element._id"  class="btn btn-primary btn-sm" data-target="#" data-toggle="modal" ><i class="uil uil-edit-alt mr-2"></i>Edit</button>              
+                                      </div>
+                                    </td> 
+                                  </ng-container>
+ 
+                                  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                                  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                                </table>
+
+                                <div *ngIf="!dataSource"> <h1>Fetching rows....</h1> </div>
+                              
+                                <mat-paginator [pageSizeOptions]="[10, 20, 50]" showFirstLastButtons></mat-paginator>
+                              </div>
+                        </div>
+                    </div>
+                </div> <!-- end col -->
+            </div>
+            <!-- end row -->
+        </div> <!-- container-fluid -->
+
+    </div> <!-- content -->
+
+</div>
+
+<div id="delete-modal" class="modal fade" role="dialog">
+  <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+          <div class="modal-body text-center">
+            <div class="row">
+              <div class="col-md-12">
+                <i class="text-danger fs-34 d-inline-block uil uil-trash-alt mb-2"></i>
+                <h6>Are you sure want to delete?</h6>
+              </div>
+            </div>
+            <hr />
+            <div class="row m-t-15">
+              <div class="col-sm-12">
+                <button (click)="deleteTeacher()" data-dismiss="modal" class="btn btn-sm btn-success mr-1" type="button">Delete</button>
+                <button (click)="cancelDeleteTeacher()" type="button" class="btn btn-sm btn-danger ml-1"
+                  data-dismiss="modal">Cancel</button>
+              </div>
+            </div>
+          </div>
+      </div>
+  </div>
+</div>
+<div id="change-password" class="modal fade" role="dialog">
+  <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+          <div class="modal-body text-center">
+            <div class="row">
+              <div class="col-md-12">
+                <form (ngSubmit)="onUpdateTeacherPassword()" [formGroup]="changePasswordForm">
+                  <app-custom-password label="New Password" formControlName="currentPassword">
+                  </app-custom-password>
+                  <small id="passwordHelpBlock" class="form-text text-muted">
+                    Your password must be 8-20 characters long, contain letters, numbers and special characters, and must not contain spaces, or emoji.
+                  </small>
+                <app-custom-password label="Confirm Password" placeholder="Confirm Password" formControlName="confirmPassword">
+                </app-custom-password>
+                  <div class="col-md-12">
+                    <div class="form-group">
+                      <button [disabled]="changePasswordForm.invalid" class="btn btn-primary">Save</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+      </div>
+  </div>
+</div>
+
+  <div class="modal fade" id="reason">
+    <div class="modal-dialog modal-md">
+      <form>
+        <div class="modal-content">
+            <div class="modal-header">
+                <h6 class="modal-title">Rejection Reason</h6>
+                <!-- <button type="button" class="close" data-dismiss="modal">&times;</button> -->
+            </div>
+            <div class="modal-body">
+               
+                <div class="form-group">
+                   <label>Reason For Rejection</label>
+                  <textarea class="form-control" rows="7">
+
+                  </textarea>
+                </div>
+                <div class="margin-top-15 text-center">
+                    <button type="button" class="btn btn-success" data-dismiss="modal">Save</button>
+                </div>
+            </div>
+        </div>
+      </form>
+    </div>
+  </div>

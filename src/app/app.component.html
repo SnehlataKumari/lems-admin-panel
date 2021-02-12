@@ -1,0 +1,8 @@
+<router-outlet></router-outlet>
+<ng-chat
+  *ngIf="authService.user && authService.user._id"
+  [adapter]="adapter"
+  [hideFriendsList]="true"
+  [userId]="authService.user._id"
+  #ngChatInstance
+></ng-chat>

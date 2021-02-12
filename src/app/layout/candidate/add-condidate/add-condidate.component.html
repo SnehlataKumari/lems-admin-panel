@@ -1,0 +1,83 @@
+<app-header></app-header>
+<app-sidebar></app-sidebar>
+<div id="candidatePage"></div>
+<div class="content-page">
+	<div class="content">
+
+		<!-- Start Content-->
+		<div class="container-fluid">
+			<div class="row page-title mt-2 d-print-none">
+				<div class="col-md-12">
+					<nav aria-label="breadcrumb" class="float-right mt-1">
+						<ol class="breadcrumb">
+							<li class="breadcrumb-item"><a class="fw-600">Candidate</a></li>
+							<li class="breadcrumb-item active" aria-current="page">Add Candidate</li>
+						</ol>
+					</nav>
+					<h4 class="mb-1 mt-0">Add Candidate</h4>
+				</div>
+			</div>
+ 
+			<div class="row">
+				<div class="col-12 col-md-12 col-sm-12 col-lg-12">
+					<div class="card">
+						<div class="card-body">
+							<div class="row">
+								<app-candidate-registration></app-candidate-registration>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- end row -->
+		</div> <!-- container-fluid -->
+
+	</div> <!-- content -->
+
+</div>
+
+<div id="delete-modal" class="modal fade" role="dialog">
+	<div class="modal-dialog modal-sm">
+		<div class="modal-body text-center">
+			<div class="row">
+				<div class="col-md-12">
+					<i class="text-danger fs-34 d-inline-block uil uil-trash-alt mb-2"></i>
+					<h6>Are you sure want to delete?</h6>
+				</div>
+			</div>
+			<hr />
+			<div class="row m-t-15">
+				<div class="col-sm-12">
+					<button type="button" class="btn btn-sm btn-success mr-1" data-target="#delete-sccess-modal"
+						data-toggle="modal" data-dismiss="modal">Delete</button>
+					<button type="button" class="btn btn-sm btn-danger ml-1" data-dismiss="modal">Cancel</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="modal fade" id="reason">
+	<div class="modal-dialog modal-md">
+		<form>
+			<div class="modal-content">
+				<div class="modal-header">
+					<h6 class="modal-title">Rejection Reason</h6>
+					<!-- <button type="button" class="close" data-dismiss="modal">&times;</button> -->
+				</div>
+				<div class="modal-body">
+
+					<div class="form-group">
+						<label>Reason For Rejection</label>
+						<textarea class="form-control" rows="7">
+
+                  </textarea>
+					</div>
+					<div class="margin-top-15 text-center">
+						<button type="button" class="btn btn-success" data-dismiss="modal">Save</button>
+					</div>
+				</div>
+			</div>
+		</form>
+	</div>
+</div>

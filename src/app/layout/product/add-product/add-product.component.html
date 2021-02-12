@@ -1,0 +1,164 @@
+<app-header></app-header>
+<app-sidebar></app-sidebar>
+<div id="productPage"></div>
+<div class="content-page">
+    <div class="content">
+        
+        <!-- Start Content-->
+        <div class="container-fluid">
+            <div class="row page-title mt-2 d-print-none">
+                <div class="col-md-12">
+                    <nav aria-label="breadcrumb" class="float-right mt-1">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a class="fw-600">Product</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Add Product</li>
+                        </ol>
+                    </nav>
+                    <h4 class="mb-1 mt-0">Add Product </h4>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <div id="smartwizard-arrows" class="sw-main sm-product sw-theme-arrows">
+                        <ul *ngIf="productId" class="nav nav-tabs step-anchor">
+                            <li class="nav-item active"><a class="nav-link">Create Product<small class="d-block">Step 1</small></a></li>
+                            <li class="nav-item"><a  class="nav-link white" routerLink="/product/{{this.productId}}/decide-cost">Decide the Cost<small class="d-block">Step 2</small></a></li>
+                            <li class="nav-item"><a  class="nav-link white" routerLink="/product/{{this.productId}}/add-course">Add Course<small class="d-block">Step 2</small></a></li>
+                            <li class="nav-item"><a  class="nav-link white" routerLink="/product/{{this.productId}}/product-publish">Publish<small class="d-block">Step 4</small></a></li>
+                        </ul>
+                        <div class="m-t-40 row">
+                            <div class="col-md-9 mx-auto">
+                                <div class="card">
+                                    <div class="card-body">
+                                      <form [formGroup]="createProductForm" (ngSubmit)="onAddProduct()">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                  <label class="col-form-label"> <span class="text-danger">*</span> Product Name  </label>
+                                                  <input type="text" class="form-control" formControlName="productName">
+                                                    <show-errors [control]="createProductForm.get('productName')"></show-errors>
+                                                </div>
+                                            </div>
+                                        <div class="col-md-6">
+                                                <div class="form-group">
+                                                  <label class="col-form-label"><span class="text-danger">*</span>Product Code  </label>
+                                                  <input type="text" class="form-control" formControlName="productCode">
+                                                    <show-errors [control]="createProductForm.get('productCode')"></show-errors>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                  <label class="col-form-label">Grade Name  </label>
+                                                  <select class="form-control" formControlName="gradeName">
+                                                           <option>choose</option> 
+                                                           <option>choose</option> 
+                                                           <option>choose</option> 
+                                                     </select>
+                                                    <show-errors [control]="createProductForm.get('gradeName')"></show-errors>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                  <label class="col-form-label">Product Type  </label>
+                                                  <select class="form-control" formControlName="productType">
+                                                           <option>choose</option> 
+                                                           <option>choose</option> 
+                                                           <option>choose</option> 
+                                                     </select>
+                                                    <show-errors [control]="createProductForm.get('productType')"></show-errors>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                  <label class="col-form-label">Language  </label>
+                                                  <select class="form-control" formControlName="language">
+                                                           <option>choose</option> 
+                                                           <option>choose</option> 
+                                                           <option>choose</option> 
+                                                     </select>
+                                                    <show-errors [control]="createProductForm.get('language')"></show-errors>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                  <label class="col-form-label">Course Level  </label>
+                                                  <select class="form-control" formControlName="courseLevel">
+                                                           <option>choose</option> 
+                                                           <option>choose</option> 
+                                                           <option>choose</option> 
+                                                     </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                  <label class="col-form-label">Course Restriction  </label>
+                                                  <select class="form-control" formControlName="courseRestriction">
+                                                           <option>choose</option> 
+                                                           <option>choose</option> 
+                                                           <option>choose</option> 
+                                                     </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                  <label class="col-form-label">Sample Course  </label>
+                                                  <select class="form-control" formControlName="sampleCourse">
+                                                           <option>choose</option> 
+                                                           <option>choose</option> 
+                                                           <option>choose</option> 
+                                                     </select>
+                                                </div>
+                                            </div>
+                                           
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label class="col-form-label">Product Image</label>
+                                                    <div class="pic-box mb-3">
+                                                        <div class="logoImg">
+                                                          <label class="profile-img">
+                                                            <img [src]="oldupdateValue && oldupdateValue.productImageId && oldupdateValue.productImageId.fullPath ? oldupdateValue.productImageId.fullPath : 'assets/images/user.png'" class="imageFile" >
+                                                            <input id="logo-file" (change)="singleFiles($event)"  type="file" class="fileInput hide" >
+                                                            <div class="fileInput btn btn-large"></div>
+                                                          </label>
+                                                        </div>
+                                                     </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                  <label class="col-form-label">Product Description  </label>
+                                                  <!-- <form role="form" #myForm="ngForm" accept-charset="UTF-8" novalidate> -->
+                                                        <div class="form-group has-feedback" 
+                                                              [ngClass]="{ 'has-error': this.createProductForm.get('productDescription').invalid && this.createProductForm.get('productDescription').touched }">
+                                                                <ckeditor formControlName="productDescription"
+                                                                    name="myckeditor"
+                                                                    [config]="ckeConfig" 
+                                                                    debounce="500" 
+                                                                    >
+                                                                 </ckeditor>
+                                                          <div *ngIf="createProductForm.get('productDescription').invalid && createProductForm.get('productDescription').touched" class="help-block">Required field.</div>
+                                                        </div>
+                                                        <!-- <button [disabled]="myForm.invalid" class="btn btn-sm btn-primary">Save</button> -->
+                                                        <!-- </form> -->
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 mx-auto">
+                                                <div class="mt-3 text-center form-group">
+                                                    <button  class="btn btn-success btn-sm" >Next <i class="uil uil-arrow-right"></i></button>
+                                                </div>
+                                            </div>    
+                                        </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> <!-- end col -->
+                </div>
+            </div>
+            <!-- end row -->
+        </div> <!-- container-fluid -->
+    </div> <!-- content -->
+</div> 
+

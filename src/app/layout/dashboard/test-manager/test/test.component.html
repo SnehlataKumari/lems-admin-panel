@@ -1,0 +1,176 @@
+<app-header></app-header>
+<app-sidebar></app-sidebar>
+<div id="testPage"></div>
+<div class="content-page">
+    <div class="content">
+        
+        <!-- Start Content-->
+        <div class="container-fluid">
+            <div class="row page-title mt-2 d-print-none">
+                <div class="col-md-12">
+                    <nav aria-label="breadcrumb" class="float-right mt-1">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a class="fw-600">Test Manager</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Test</li>
+                        </ol>
+                    </nav>
+                    <h4 class="mb-1 mt-0">Test Manager</h4>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-body">
+                           <div class="row m-b-20">
+                               <!-- <div class="col-md-3">
+                                   <select class="form-control">
+                                       <option>Select Filter</option>
+                                       <option>Test Name</option>
+                                       <option>Test Category</option>
+                                   </select> 
+                               </div> -->
+                               <div class="offset-md-7 col-md-5">
+                                   <div class="float-right">
+                                    <button class="btn btn-primary btn-sm mr-3" routerLink="/home/add-test"><i class="uil-plus-circle"></i> Add New Test</button>
+                                    <button class="btn btn-white btn-sm text-danger" data-target="#delete-modal" data-toggle="modal"><i class="uil-trash"></i> Delete
+                                        </button>
+                                   </div>
+                                </div>
+                           </div>
+                            <div class="row m-b-30">
+                                 <div class="offset-md-9 col-md-3">
+                                    <mat-form-field>
+                                      <mat-label class="ml-2">Search</mat-label>
+                                      <input matInput (keyup)="applyFilter($event)" placeholder="Ex. Sneh" #input>
+                                    </mat-form-field>
+                                      <!-- <input type="text" class="form-control" placeholder="Search"> -->
+                                 </div>
+                            </div>
+                            <div class="mt-4 mat-elevation-z8 table-responsive">
+                                <table mat-table [dataSource]="dataSource" class="table">
+                              
+                                  <!-- Position Column -->
+                                  <ng-container matColumnDef="id">
+                                  <th mat-header-cell *matHeaderCellDef>
+                                    <mat-checkbox (change)="$event ? masterToggle() : null" [checked]="selection.hasValue() && isAllSelected()"
+                                      [indeterminate]="selection.hasValue() && !isAllSelected()" [aria-label]="checkboxLabel()">
+                                    </mat-checkbox> Test Code
+                                  </th>
+                                  <td mat-cell *matCellDef="let element">
+                                    <mat-checkbox (click)="$event.stopPropagation()" (change)="$event ? selection.toggle(element) : null"
+                                      [checked]="selection.isSelected(element)" [aria-label]="checkboxLabel(element)">
+                                      {{element.testCode}}
+                                    </mat-checkbox>
+                                  </td>
+                                  
+                                  <!-- Test Code -->
+                                      <!-- <ng-container matColumnDef="testCode">
+                                        <th mat-header-cell *matHeaderCellDef>Test Code</th>
+                                        <td mat-cell *matCellDef="let element"> {{element.testCode}} </td>
+                                      </ng-container> -->
+                                  </ng-container>
+                              
+                                  <!-- Name Column -->
+                                  <ng-container matColumnDef="name">
+                                    <th mat-header-cell *matHeaderCellDef>Test Name</th>
+                                    <td mat-cell *matCellDef="let element"> {{element.testName}} </td>
+                                  </ng-container>
+                               
+                                  <!-- Weight Column -->
+                                  <ng-container matColumnDef="questionCount">
+                                    <th mat-header-cell *matHeaderCellDef>Total Question</th>
+                                    <td mat-cell *matCellDef="let element"> {{element.totalNoOfQuestions || 0}} </td>
+                                  </ng-container>
+
+                                  <!-- Symbol Column -->
+                                  <ng-container matColumnDef="difficultyLevel">
+                                    <th mat-header-cell *matHeaderCellDef>Difficulty Level</th>
+                                    <td mat-cell *matCellDef="let element"> {{element.testDificultyLevel || 'Not Filled yet'}} </td>
+                                  </ng-container>
+
+
+                                  <!-- <ng-container matColumnDef="sname">
+                                    <th mat-header-cell *matHeaderCellDef>Asspsiated Product</th>
+                                    <td mat-cell *matCellDef="let element"> {{element.sname}} </td>
+                                  </ng-container> -->
+
+                                     <ng-container matColumnDef="category">
+                      <th mat-header-cell *matHeaderCellDef> Test Category </th>
+                      <td mat-cell *matCellDef="let element"> {{element.testCategory}} </td>
+                    </ng-container>
+                                  
+                                  <ng-container matColumnDef="action">
+                                    <th mat-header-cell *matHeaderCellDef> Action </th>
+                                    <td mat-cell *matCellDef="let element">
+                                        <div class="dropdown align-self-center">
+                                            <a class="pointer dropdown-toggle float-right arrow-none text-muted" data-toggle="dropdown"
+                                                aria-expanded="false">
+                                                <i class="uil uil-ellipsis-v"></i>
+                                            </a>
+                                            <div class="dropdown-menu dropdown-menu-right">
+                                                <!-- item-->
+                                                <a routerLink="/home/{{element._id}}/add-test" class="dropdown-item"><i
+                                                        class="uil uil-edit-alt mr-2"></i>Edit Test</a>
+                                                <!-- item-->
+                                                <a href="javascript:void(0);" class="dropdown-item" (click)="onPublishTest(element)"><i
+                                                        class="uil uil-check mr-2"></i>Publish Test</a>
+                                                <a href="javascript:void(0);" class="dropdown-item"><i
+                                                    class="uil uil-export mr-2" (click)="onExportTest(element)"></i>Export Test</a> 
+                                                <a href="javascript:void(0);" class="dropdown-item"><i
+                                                    class="uil uil-expand-right mr-2" (click)="onAssignTest(element)"></i>Assign Test</a> 
+                                                <a href="javascript:void(0);" class="dropdown-item"><i
+                                                    class="uil uil-globe mr-2" (click)="onNotification(element)"></i>Notification</a>   
+                                                <a href="javascript:void(0);" class="dropdown-item"><i
+                                                    class="uil uil-entry mr-2" (click)="onImportTagTest(element)"></i>Import Tag Sheet</a> 
+                                                <a href="javascript:void(0);" class="dropdown-item"><i
+                                                    class="uil uil-entry mr-2" (click)="onDuplicateTag(element)"></i>Dublicate Tag</a>                         
+                                                <div class="dropdown-divider"></div>
+                                                <!-- item-->
+                                                <a href="javascript:void(0);" (click)="deleteTest(element)" class="dropdown-item text-danger">Delete</a>
+                                            </div>
+                                        </div>
+                                    </td>
+                                  </ng-container>
+ 
+                                  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                                  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                                </table>
+                              
+                                <mat-paginator [pageSizeOptions]="[10, 20, 50]" showFirstLastButtons></mat-paginator>
+                              </div>
+                        </div>
+                    </div>
+                </div> <!-- end col -->
+            </div>
+            <!-- end row -->
+        </div> <!-- container-fluid -->
+
+    </div> <!-- content -->
+
+</div>
+
+<div id="delete-modal" class="modal fade" role="dialog">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+        <div class="modal-body text-center">
+        
+          <div class="row">
+            <div class="col-md-12">
+              <i class="text-danger fs-34 d-inline-block uil uil-trash-alt mb-2"></i>
+              <h6>Are you sure want to delete?</h6>
+            </div>
+          </div>
+          <hr />
+          <div class="row m-t-15">
+            <div class="col-sm-12">
+              <button (click)="onDeleteSelected()" class="btn btn-sm btn-success mr-1" data-target="#delete-sccess-modal"
+                data-toggle="modal" data-dismiss="modal">Delete</button>
+              <button type="button" class="btn btn-sm btn-danger ml-1" data-dismiss="modal">Cancel</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>

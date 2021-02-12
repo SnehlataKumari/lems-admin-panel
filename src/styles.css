@@ -1,0 +1,23 @@
+.password{
+  position: absolute;
+  right: 8px;
+  color: #9f9e9e;
+  top: 12px;
+  font-size: 16px;
+  cursor: pointer; 
+  z-index: 999;
+}
+
+/* You can add global styles to this file, and also import other style files */
+.mat-form-field-infix > input.ng-invalid {
+  border: unset !important;
+}
+
+.ng-invalid:not(form):not(div):not(app-custom-password).ng-touched {
+  border: 1px red solid;
+}
+
+/* You can add global styles to this file, and also import other style files */
+.ng-invalid:not(form).ng-touched {
+  border: red 1px solid;
+}

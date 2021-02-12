@@ -1,0 +1,252 @@
+<app-header></app-header>
+<app-sidebar></app-sidebar>
+<div id="candidatePage"></div>
+<div class="content-page">
+  <div class="content">
+
+    <!-- Start Content-->
+    <div class="container-fluid">
+      <div class="row page-title mt-2 d-print-none">
+        <div class="col-md-12">
+          <nav aria-label="breadcrumb" class="float-right mt-1">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a class="fw-600">Candidate</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Candidate</li>
+            </ol>
+          </nav>
+          <h4 class="mb-1 mt-0">Candidate</h4>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-12">
+          <div class="card">
+            <div class="card-body">
+              <div class="row m-b-20">
+                <!-- <div class="col-md-3">
+                  <select class="form-control">
+                    <option>Select Filter</option>
+                    <option>Test Name</option>
+                    <option>Test Category</option>
+                  </select>
+                </div> -->
+                <div class="offset-md-7 col-md-5">
+                  <div class="float-right mb-3">
+                    <button routerLink="/candidate/add-candidate" class="btn btn-primary btn-sm"><i
+                        class="uil-plus-circle"></i> Add</button>
+
+                        
+                    <!-- <button id="btn-new-event" class="btn btn-sm mr-3 btn-success">
+                      <i class="uil uil-export"></i> Export</button> -->
+                    <!-- <button data-target="#delete-modal" data-toggle="modal" class="btn btn-white btn-sm text-danger">
+                      <i class="uil-trash"></i> Delete </button> -->
+
+                  </div>
+                </div>
+                <div class="offset-md-9 col-md-3">
+                  <input type="text" class="form-control" (keyup)="applyFilter($event)" placeholder="Search">
+                </div>
+              </div>
+              <div class="row m-b-30">
+                
+              </div>
+              <div class="mt-4 mat-elevation-z8 table-responsive">
+                <table mat-table [dataSource]="dataSource" class="table">
+
+                  <!-- Position Column -->
+                  <!-- <ng-container matColumnDef="id">
+                    <th mat-header-cell *matHeaderCellDef>
+                      <div class="custom-control custom-checkbox mb-2">
+                        <input type="checkbox" class="custom-control-input" id="customCheck1">
+                        <label class="custom-control-label" for="customCheck1">Sr. No.</label>
+                      </div>
+                    </th>
+                    <td mat-cell *matCellDef="let element">
+                      <div class="custom-control custom-checkbox mb-2">
+                        <input type="checkbox" class="custom-control-input" [id]="'customCheck'+element.student._id">
+                        <label class="custom-control-label" [for]="'customCheck'+element.student._id">{{element.student._id | slice:0:-3}}.</label>
+                      </div>
+                    </td>
+                  </ng-container> -->
+
+                  <!-- Name Column -->
+                  <ng-container matColumnDef="name">
+                    <th mat-header-cell *matHeaderCellDef>Candidate Name</th>
+                    <td mat-cell *matCellDef="let element"> {{element.user.firstName}} {{element.user.lastName}}</td>
+                  </ng-container>
+
+                  <!-- Weight Column -->
+                  <ng-container matColumnDef="email">
+                    <th mat-header-cell *matHeaderCellDef>Email Id</th>
+                    <td mat-cell *matCellDef="let element"> {{element.user.email}} </td>
+                  </ng-container>
+
+                  <ng-container matColumnDef="phone">
+                    <th mat-header-cell *matHeaderCellDef>Phone</th>
+                    <td mat-cell *matCellDef="let element">+91 {{element.user.phone}} </td>
+                  </ng-container>
+
+                  <ng-container matColumnDef="grade">
+                    <th mat-header-cell *matHeaderCellDef>Grade</th>
+                    <td mat-cell *matCellDef="let element"> {{element.user.grade}} </td>
+                  </ng-container>
+
+                  <ng-container matColumnDef="registeredOn">
+                    <th mat-header-cell *matHeaderCellDef>Registration Date</th>
+                    <td mat-cell *matCellDef="let element"> {{element.user.createdAt | date}} </td>
+                  </ng-container>
+
+                  <ng-container matColumnDef="action">
+                    <th mat-header-cell *matHeaderCellDef>Action</th>
+                    <td mat-cell *matCellDef="let element">
+                      <div class="d-flex">
+                        <button class="btn btn-danger mr-2 btn-sm" (click)="selectStudent(element)" data-target="#delete-modal" data-toggle="modal"><i
+                            class="uil-trash mr-2"></i> Delete </button>
+                        <button class="btn btn-warning mr-2 btn-sm" (click)="selectStudentProfile(element)" data-target="#view" data-toggle="modal"><i
+                            class="uil-eye mr-2"></i> View </button>
+                        <button class="btn btn-primary btn-sm" type="button" [routerLink]="'/candidate/'+element.student._id+'/edit'"><i
+                            class="uil uil-edit-alt mr-2"></i>Edit</button>
+                      </div>
+                    </td>
+                  </ng-container>
+
+                  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                </table>
+
+                <mat-paginator [pageSizeOptions]="[10, 20, 50]" showFirstLastButtons></mat-paginator>
+              </div>
+            </div>
+          </div>
+        </div> <!-- end col -->
+      </div>
+      <!-- end row -->
+    </div> <!-- container-fluid -->
+
+  </div> <!-- content -->
+
+</div>
+
+<div id="delete-modal" class="modal fade" role="dialog">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-body text-center">
+      <div class="modal-content">
+        <div class="row">
+          <div class="col-md-12">
+            <i class="text-danger fs-34 d-inline-block uil uil-trash-alt mb-2"></i>
+            <h6>Are you sure want to delete?</h6>
+          </div>
+        </div>
+        <hr />
+        <div class="row m-t-15">
+          <div class="col-sm-12">
+            <button type="button" class="btn btn-sm btn-success mr-1" data-target="#delete-sccess-modal" data-toggle="modal"
+              (click)="deleteSelectedStudents()" data-dismiss="modal">Delete</button>
+            <button type="button" class="btn btn-sm btn-danger ml-1" data-dismiss="modal">Cancel</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="reason">
+  <div class="modal-dialog modal-md">
+    <form>
+      <div class="modal-content">
+        <div class="modal-header">
+          <h6 class="modal-title">Rejection Reason</h6>
+          <!-- <button type="button" class="close" data-dismiss="modal">&times;</button> -->
+        </div>
+        <div class="modal-body">
+
+          <div class="form-group">
+            <label>Reason For Rejection</label>
+            <textarea class="form-control" rows="7">
+
+                  </textarea>
+          </div>
+          <div class="margin-top-15 text-center">
+            <button type="button" class="btn btn-success" data-dismiss="modal">Save</button>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+
+<div class="modal fade" id="view">
+  <div class="modal-dialog modal-md">
+    <form>
+      <div class="modal-content">
+        <div class="modal-header">
+          <h6 class="modal-title">View Requested Student</h6>
+          <!-- <button type="button" class="close" data-dismiss="modal">&times;</button> -->
+        </div>
+        <div class="modal-body" *ngIf="user && student">
+          <div class="profile-view" style="background-image: url(assets/images/icon/pattern.svg);
+          background-repeat: no-repeat;">
+          <div class="row">
+            <div class="col-md-8">
+              <div class="profile-view-left">
+                <div class="d-flex">
+                  <div class="add-box gal-box image-upload im-50">
+                    <img id="prof" class="avatar-lg rounded-circle"
+                      [src]="user?.profileImage ? user?.profileImage : 'assets/images/icon/user_placeholder_header.svg'"
+                      class="gal-result">
+                  </div>
+                  <div class="ml-3 view-title">
+                    <h5 class="white">{{user?.firstName}} {{user?.lastName}}</h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="pt-48pt pb-48pt">
+          <div class="container-fluid">
+            <div class="profile-card padding-33">
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="profile-view-ed-info">
+                    <h5>EDUCATION INFO</h5>
+                    <ul>
+                      <li><span>Class</span></li>
+                      <li><span>{{student?.education?.grade || 'NA'}}</span></li>
+                      <li><span>Board</span></li>
+                      <li><span>{{student?.education?.board || 'NA'}}</span></li>
+                      <li><span>Target</span></li>
+                      <li><span>{{student?.education?.targetExam || 'NA'}}</span></li>
+                    </ul>
+                  </div>
+                  <div class="col-md-12">
+                    <div class="profile-view-ed-info border-right" *ngIf="student.guardians && student.guardians.length">
+                      <h5>PARENT INFO</h5>
+                      <ul *ngFor="let parent of student?.guardians">
+                        <li><span>Parent Email</span></li>
+                        <li><span>{{parent.email}}</span></li>
+                        <li><span>Parent Contact Number</span></li>
+                        <li><span>{{parent.mobileNumber}}</span></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div> 
+                <div class="col-md-12">
+                  <div class="profile-view-ed-info">
+                    <h5>CONTACT INFO</h5>
+                    <ul>
+                      <li><span>Email ID</span></li>
+                      <li><span>{{user.email}}</span></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

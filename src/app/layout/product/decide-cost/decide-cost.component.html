@@ -1,0 +1,76 @@
+<app-header></app-header>
+<app-sidebar></app-sidebar>
+<div id="productPage"></div>
+<div class="content-page">
+    <div class="content">
+        
+        <!-- Start Content-->
+        <div class="container-fluid">
+            <div class="row page-title mt-2 d-print-none">
+                <div class="col-md-12">
+                    <nav aria-label="breadcrumb" class="float-right mt-1">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a class="fw-600">Product</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Decide Cost</li>
+                        </ol>
+                    </nav>
+                    <h4 class="mb-1 mt-0">Decide Cost</h4>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <div id="smartwizard-arrows" class="sw-main sm-product sw-theme-arrows">
+                        <ul class="nav nav-tabs step-anchor">
+                            <li class="nav-item active"><a routerLink="/product/{{productId}}/add-product" class="nav-link">Create Product<small class="d-block">Step 1</small></a></li>
+                            <li class="nav-item active"><a routerLink="/product/{{productId}}/decide-cost"  class="nav-link white">Decide the Cost<small class="d-block">Step 2</small></a></li>
+                            <li class="nav-item"><a routerLink="/product/{{productId}}/add-course"  class="nav-link white">Add Course<small class="d-block">Step 3</small></a></li>
+                            <li class="nav-item"><a routerLink="/product/{{productId}}/product-publish"  class="nav-link white">Publish<small class="d-block">Step 4</small></a></li>
+                        </ul>
+                        <div class="m-t-40 row">
+                            <div class="col-md-9 mx-auto">
+                                <div class="card">
+                                    <div class="card-body">
+                                      <form (ngSubmit)="onDecideCost()" [formGroup]="decideCostForm">
+                                        <div class="row">
+                                            <div class="col-md-7">
+                                                <div class="form-group">
+                                                     <label><span class="text-danger">*</span> Price to Compare</label>
+                                                     <input type="number" formControlName="priceToCompare" class="form-control">
+                                                     <show-errors [control]="decideCostForm.get('priceToCompare')"></show-errors>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-7">
+                                                <div class="form-group">
+                                                     <label><span class="text-danger">*</span> Price</label>
+                                                     <input type="number" formControlName="price" class="form-control">
+                                                     <show-errors [control]="decideCostForm.get('price')"></show-errors>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12 form-group">
+                                                <div class="custom-control custom-switch mb-2">
+                                                    <input type="checkbox" class="custom-control-input" formControlName="chargeTax" id="customSwitch1">
+                                                    <label class="custom-control-label" for="customSwitch1"></label>
+                                                </div>
+                                                <h6 class="mt-1">Charge Taxes On this Product (%)</h6> 
+                                             </div>
+                                            <div class="col-md-6 mx-auto">
+                                                <div class="mt-3 text-center form-group">
+                                                    <button class="btn btn-primary btn-sm mr-3" routerLink="/product/{{this.productId}}/add-product"><i class="uil uil-arrow-left"></i> Previous  </button>
+                                                    <button class="btn btn-success btn-sm">Next <i class="uil uil-arrow-right"></i> </button>
+                                                </div>
+                                            </div>    
+                                        </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> <!-- end col -->
+                </div>
+            </div>
+            <!-- end row -->
+        </div> <!-- container-fluid -->
+    </div> <!-- content -->
+</div> 
+

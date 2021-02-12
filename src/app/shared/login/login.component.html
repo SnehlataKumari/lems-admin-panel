@@ -1,0 +1,97 @@
+<div class="authentication-bg">
+  <div class="account-pages py-5">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-xl-10">
+          <div class="card">
+            <div class="card-body p-0">
+              <div class="row">
+                <div class="col-md-6 p-5 padd-550">
+                  <div class="mx-auto mb-4">
+                    <a routerLink="/">
+                      <img [src]="imgSrc" width="110px" class="img-fluid" alt="" height="" />
+                    </a>
+                  </div>
+
+                  <h6 class="h5 mb-0 mt-4">{{name}}</h6>
+                  <p class="text-muted mt-1 mb-4">Enter your email address and password to
+                    access admin.</p>
+
+                  <form class="authentication-form" (ngSubmit)="onLogin()" [formGroup]="loginForm">
+                    <div class="form-group">
+                      <label class="form-control-label">Email Address</label>
+                      <div class="input-group input-group-merge">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                              fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                              stroke-linejoin="round" class="feather feather-mail icon-dual">
+                              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                              </path>
+                              <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                          </span>
+                        </div>
+                        <input name="email" type="email" class="form-control" formControlName="email" id="email" placeholder="Enter your email">
+                      </div>
+                      <show-errors [control]="loginForm.get('email')"></show-errors>
+
+                    </div>
+                     <app-custom-password formControlName="password" label="Password" placeholder="Enter Password" ></app-custom-password>
+                    <div class="form-group mt-4">
+                      <label class="form-control-label"></label>
+                      <a routerLink="/forgot-password" class="float-right text-unline-dashed ml-1">Forgot password?</a>
+                      <!-- <div class="input-group input-group-merge">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                              fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                              stroke-linejoin="round" class="feather feather-lock icon-dual">
+                              <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                              <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                            </svg>
+                          </span>
+                        </div>
+                        <input type="password" formControlName="password" class="form-control" id="password" placeholder="">
+                      </div> -->
+                    </div>
+
+                    <div class="form-group mt-4 mb-4">
+                      <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="checkbox-signin" checked>
+                        <label class="custom-control-label" for="checkbox-signin">Remember
+                          me</label>
+                      </div>
+                    </div>
+
+                    <div class="form-group mb-0 text-center">
+                      <button 
+                        [disabled]="loginForm.invalid"
+                        class="btn btn-block btn-filled form-btn">
+                        <span class="bh"></span>
+                        <span>Log In <i class="float-right uil uil-arrow-right"></i></span>
+                      </button>
+                    </div>
+                  </form>
+                </div>
+                <div class="col-lg-6 d-none d-md-inline-block">
+                  <div class="auth-page-sidebar">
+                    <div class="overlay"></div>
+                    <div class="auth-user-testimonial">
+                      <p class="font-size-24 font-weight-bold text-white mb-1">I love it!</p>
+                      <p class="lead">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. "</p>
+                      <p>- Admin</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div> <!-- end card-body -->
+          </div>
+        </div> <!-- end col -->
+      </div>
+      <!-- end row -->
+    </div>
+    <!-- end container -->
+  </div>
+</div>

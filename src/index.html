@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>LEMS Academy</title>
+    <base href="/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta content="" name="description" />
+    <meta content="" name="author" />
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="assets/images/logo_login.svg" />
+    <!-- App css -->
+    <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+    <link
+      href="assets/css/bootstrap.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/cdk-overlay.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/iEdit.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/app.min.css" rel="stylesheet" type="text/css" />
+    <link
+      type="text/css"
+      href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
+      rel="stylesheet"
+    />
+
+    <link href="assets/css/style.css" rel="stylesheet" type="text/css" />
+    <script
+      src="https://cdn.agora.io/sdk/release/AgoraRTCSDK-3.2.1.js"
+      async
+    ></script>
+  </head>
+  <body>
+    <div class="preloader">
+      <div class="sk-double-bounce">
+        <div class="sk-child sk-double-bounce1"></div>
+        <div class="sk-child sk-double-bounce2"></div>
+      </div>
+    </div>
+
+    <div id="wrapper">
+      <app-root></app-root>
+      <!-- Right bar overlay-->
+      <div class="rightbar-overlay"></div>
+      <!-- Vendor js -->
+      <script src="assets/js/vendor.min.js"></script>
+      <!-- optional plugins -->
+      <script src="assets/js/moment.min.js"></script>
+      <!-- <script src="assets/libs/apexcharts/apexcharts.min.js"></script> -->
+      <!-- <script src="assets/js/flatpickr.min.js"></script> -->
+      <script src="assets/js/iEdit.js"></script>
+      <!-- page js -->
+      <!-- <script src="assets/js/pages/dashboard.init.js"></script> -->
+      <!-- App js -->
+      <!-- <script src="assets/js/jquery.smartWizard.min.js"></script> -->
+      <script src="https://cdn.ckeditor.com/4.9.2/full-all/ckeditor.js"></script>
+      <script>
+        CKEDITOR.config.forcePasteAsPlainText = true;
+      </script>
+      <script>
+        setTimeout(function () {
+          $(".preloader").addClass("stop");
+        }, 1000);
+      </script>
+    </div>
+  </body>
+</html>

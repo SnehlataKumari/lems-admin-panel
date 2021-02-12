@@ -1,0 +1,365 @@
+<!-- <app-header></app-header>
+<app-sidebar></app-sidebar>
+<div id="livePage"></div>
+<div class="content-page">
+    <div class="content">
+         -->
+<!-- Start Content-->
+<!-- <div class="container-fluid">
+            <div class="row page-title mt-2 d-print-none">
+                <div class="col-md-12">
+                    <nav aria-label="breadcrumb" class="float-right mt-1">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a class="fw-600">Product</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Live Class/Schedule Class</li>
+                        </ol> -->
+<!-- </nav>
+                    <h4 class="mb-1 mt-0">Live Class/Schedule Class</h4>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-body">
+                           <div class="row m-b-20">
+                               <div class="col-md-3">
+                                   <select class="form-control">
+                                       <option>Select Filter</option>
+                                       <option>Test Name</option>
+                                       <option>Test Category</option>
+                                   </select> 
+                               </div>
+                               <div class="offset-md-4 col-md-5">
+                                   <div class="float-right">
+                                    <button routerLink="/product/add-live-classes" class="btn btn-primary btn-sm mr-3"><i class="uil-plus-circle"></i> Add</button> -->
+<!-- <button id="btn-new-event" class="btn btn-sm mr-3 btn-success">
+                                        <i class="uil uil-export"></i> Export</button>   -->
+<!-- <button data-target="#delete-modal" data-toggle="modal" class="btn btn-white btn-sm text-danger">
+                                        <i class="uil-trash"></i> Delete </button> 
+                                   </div>
+                                </div>
+                           </div>
+                            <div class="row m-b-30">
+                                 <div class="offset-md-9 col-md-3">
+                                      <input type="text" class="form-control" placeholder="Search">
+                                 </div>
+                            </div>
+                            <div class="mt-4 mat-elevation-z8 table-responsive">
+                                <table mat-table [dataSource]="dataSource" class="table">
+                               -->
+<!-- Position Column -->
+<!-- <ng-container matColumnDef="id">
+                                    <th mat-header-cell *matHeaderCellDef>
+                                       <div class="custom-control custom-checkbox mb-2">
+                                      <input type="checkbox" class="custom-control-input" id="customCheck1">
+                                      <label class="custom-control-label" for="customCheck1">Sr. No.</label> -->
+<!-- </div> 
+                                </th>
+                                    <td mat-cell *matCellDef="let element"> 
+                                      <div class="custom-control custom-checkbox mb-2">
+                                        <input type="checkbox" class="custom-control-input" id="customCheck1">
+                                        <label class="custom-control-label" for="customCheck1">{{element.id}}.</label>
+                                        </div> 
+                                       </td>
+                                  </ng-container> -->
+
+<!-- Name Column -->
+<!-- <ng-container matColumnDef="uid">
+                                    <th mat-header-cell *matHeaderCellDef>Live Class Name</th>
+                                    <td mat-cell *matCellDef="let element"> {{element.uid}} </td>
+                                  </ng-container> -->
+
+<!-- Weight Column -->
+<!-- <ng-container matColumnDef="username">
+                                    <th mat-header-cell *matHeaderCellDef>Stream Code</th>
+                                        <td mat-cell *matCellDef="let element"> {{element.username}} </td>
+                                  </ng-container>
+
+                                  <ng-container matColumnDef="eroll">
+                                    <th mat-header-cell *matHeaderCellDef>Mentor Name</th>
+                                        <td mat-cell *matCellDef="let element"> {{element.eroll}} </td>
+                                  </ng-container> -->
+
+<!-- Symbol Column -->
+<!-- <ng-container matColumnDef="bdatetime">
+                                    <th mat-header-cell *matHeaderCellDef>Time</th>
+                                    <td mat-cell *matCellDef="let element"> {{element.bdatetime}} </td>
+                                  </ng-container> -->
+
+<!-- <ng-container matColumnDef="sname">
+                                    <th mat-header-cell *matHeaderCellDef>Date</th>
+                                    <td mat-cell *matCellDef="let element"> {{element.sname}} </td>
+                                  </ng-container>
+ 
+                                  <ng-container matColumnDef="status">
+                                    <th mat-header-cell *matHeaderCellDef>No. Of Product</th>
+                                    <td mat-cell *matCellDef="let element"> {{element.status}} </td> -->
+<!-- </ng-container>
+
+                                  <ng-container matColumnDef="assign">
+                                    <th mat-header-cell *matHeaderCellDef>Action</th>
+                                    <td mat-cell *matCellDef="let element">
+                                      <div class="d-flex">
+                                        <button class="btn btn-success mr-2 btn-sm" >Accept </button>
+                                        <button class="btn btn-danger mr-2 btn-sm" >Reject </button> -->
+<!-- <button class="btn btn-primary btn-sm mr-2" data-target="#reason" data-toggle="modal" >Reason</button>              
+                                        <button class="btn btn-danger  mr-2 btn-sm">Go Live </button>
+                                        <button class="btn btn-primary mr-2 btn-sm">Publish</button>              
+                                      </div>
+                                    </td>
+                                  </ng-container> 
+  
+                                  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                                  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                                </table>
+                              
+                                <mat-paginator [pageSizeOptions]="[10, 20, 50]" showFirstLastButtons></mat-paginator>
+                              </div>
+                        </div>
+                    </div>
+                </div>  -->
+<!-- end col -->
+<!-- </div> -->
+<!-- end row -->
+<!-- </div>  -->
+<!-- container-fluid -->
+
+<!-- </div>  -->
+<!-- content -->
+
+<!-- </div>
+
+<div id="delete-modal" class="modal fade" role="dialog">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-body text-center">
+        <div class="row">
+          <div class="col-md-12">
+            <i class="text-danger fs-34 d-inline-block uil uil-trash-alt mb-2"></i>
+            <h6>Are you sure want to delete?</h6>
+          </div> -->
+<!-- </div>
+        <hr />
+        <div class="row m-t-15">
+          <div class="col-sm-12">
+            <button type="button" class="btn btn-sm btn-success mr-1" data-target="#delete-sccess-modal" data-toggle="modal" data-dismiss="modal">Delete</button>
+            <button type="button" class="btn btn-sm btn-danger ml-1" data-dismiss="modal">Cancel</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="reason">
+    <div class="modal-dialog modal-md">
+      <form>
+        <div class="modal-content">
+            <div class="modal-header">
+                <h6 class="modal-title">Rejection Reason</h6> -->
+<!-- <button type="button" class="close" data-dismiss="modal">&times;</button> -->
+<!-- </div>
+            <div class="modal-body">
+               
+                <div class="form-group">
+                   <label>Reason For Rejection</label>
+                  <textarea class="form-control" rows="7">
+
+                  </textarea>
+                </div>
+                <div class="margin-top-15 text-center">
+                    <button type="button" class="btn btn-success" data-dismiss="modal">Save</button>
+                </div>
+            </div>
+        </div>
+      </form>
+    </div>
+  </div> -->
+
+<app-header></app-header>
+<app-sidebar></app-sidebar>
+<div id="livePage"></div>
+<div class="content-page">
+  <div class="content">
+
+    <!-- Start Content-->
+    <div class="container-fluid">
+      <div class="row page-title mt-2 d-print-none">
+        <div class="col-md-12">
+          <nav aria-label="breadcrumb" class="float-right mt-1">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a class="fw-600">Product</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Live Class/Schedule Class</li>
+            </ol>
+          </nav>
+          <h4 class="mb-1 mt-0">Live Class/Schedule Class</h4>
+        </div>
+      </div>
+
+
+
+      <div class="row">
+        <div class="col-12">
+          <div class="card">
+            <div class="card-body">
+              <div class="row m-b-10">
+                <div class="col-md-3">
+                </div>
+
+              </div>
+                  <div class="row m-b-200">
+                    <div class="offset-md-1 col-md-3">
+                      <input type="text" (keyup)="applyFilter($event)" class="form-control" placeholder="Search">
+                    </div>
+                  </div>
+                  <div class="row m-b-30">
+              <div class="offset-md-10 col-md-3">
+                <!-- <div class="float-right"> -->
+                  <button routerLink="/product/add-live-classes" class="btn btn-primary btn-sm mr-5"><i
+                      class="uil-plus-circle"></i>
+                    Add Live Class</button>
+                <!-- </div> -->
+                </div>
+              </div>
+              <div class="mt-4 mat-elevation-z8 table-responsive">
+                <table mat-table [dataSource]="dataSource" class="table">
+                  <!-- Position Column -->
+                  <ng-container matColumnDef="streamCode">
+                    <th mat-header-cell *matHeaderCellDef>
+                      <div class="custom-control mb-2">
+                        <!-- <input type="checkbox" class="custom-control-input" id="customCheck1"> -->
+                        <label class="" for="customCheck1">Stream code</label>
+                      </div>
+                    </th>
+                    <td mat-cell *matCellDef="let element">
+                      <div class="custom-control mb-2">
+                        <!-- <input type="checkbox" class="custom-control-input" id="customCheck1"> -->
+                        <label class="" for="customCheck1">{{element.streamCode}}</label>
+                      </div>
+                    </td>
+                  </ng-container>
+
+                  <!-- Name Column -->
+                  <ng-container matColumnDef="teacherName">
+                    <th mat-header-cell *matHeaderCellDef>Teacher Name</th>
+                    <td mat-cell *matCellDef="let element">
+                      some teacher
+                      <!-- {{element.user.firstName}} {{element.user.lastName}}  -->
+                    </td>
+                  </ng-container>
+
+                  <!-- Weight Column -->
+                  <ng-container matColumnDef="date">
+                    <th mat-header-cell *matHeaderCellDef>Date</th>
+                    <td mat-cell *matCellDef="let element"> {{element.date | date}} </td>
+                  </ng-container>
+
+                  <!-- Symbol Column -->
+                  <ng-container matColumnDef="selectedGroup">
+                    <th mat-header-cell *matHeaderCellDef>Group</th>
+                    <td mat-cell *matCellDef="let element"> {{element.selectedGroup}} </td>
+                  </ng-container>
+
+                  <ng-container matColumnDef="liveCLassPreview">
+                    <th mat-header-cell *matHeaderCellDef>Live Class Preview</th>
+                    <td mat-cell *matCellDef="let element">
+                      <button class="btn btn-primary mr-2 btn-sm">
+                        <i class="uil uil-google-play"></i>
+                      </button> </td>
+                  </ng-container>
+                  <ng-container matColumnDef="tprev">
+                    <th mat-header-cell *matHeaderCellDef>Test Preview</th>
+                    <td mat-cell *matCellDef="let element">
+                      <button routerLink="/product/instruction-preview" class="btn btn-primary mr-2 btn-sm">
+                        <i class="uil uil-google-play"></i>
+                      </button> </td>
+                  </ng-container>
+                  <ng-container matColumnDef="action">
+                    <th mat-header-cell *matHeaderCellDef>Action</th>
+                    <td mat-cell *matCellDef="let element">
+                      <button data-target="#delete-modal" (click)="setSelectedLiveClass(element._id)"
+                        data-toggle="modal" class="btn btn-white btn-sm text-danger">
+                        <i class="uil-trash"></i> Delete </button>
+                  </ng-container>
+
+
+                  <!-- <ng-container matColumnDef="approveReject">
+                      <th mat-header-cell *matHeaderCellDef> Approve / Reject Request </th>
+                      <td mat-cell *matCellDef="let element">
+                        <div class="d-flex">
+                          <button [disabled]="element.hasAcceptedRequest === true" (click)="onAcceptLiveClass(element)"
+                            class="btn btn-success mr-2 btn-sm">Accept </button>
+                          <button [disabled]="element.hasAcceptedRequest === false"
+                            (click)="setSelectedLiveClass(element)" class="btn btn-danger mr-2 btn-sm"
+                            data-target="#reason" data-toggle="modal">Reject </button>
+                                      
+                        </div>
+                      </td>
+                    </ng-container> -->
+
+                  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                </table>
+
+                <mat-paginator [pageSizeOptions]="[10, 20, 50]" showFirstLastButtons></mat-paginator>
+              </div>
+            </div>
+          </div>
+        </div> <!-- end col -->
+      </div>
+      <!-- end row -->
+    </div> <!-- container-fluid -->
+
+  </div> <!-- content -->
+
+</div>
+
+<div id="delete-modal" class="modal fade" role="dialog">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-body text-center">
+
+
+        <div class="row">
+          <div class="col-md-12">
+            <i class="text-danger fs-34 d-inline-block uil uil-trash-alt mb-2"></i>
+            <h6>Are you sure want to delete?</h6>
+          </div>
+        </div>
+        <hr />
+        <div class="row m-t-15">
+          <div class="col-sm-12">
+            <button  (click)="deleteLiveClass()" class="btn btn-sm btn-success mr-1" data-target="#delete-sccess-modal"
+              data-toggle="modal" data-dismiss="modal">Delete</button>
+            <button  class="btn btn-sm btn-danger ml-1" data-dismiss="modal">Cancel</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- <div class="modal fade" id="reason">
+    <div class="modal-dialog modal-md">
+      <form>
+        <div class="modal-content">
+          <div class="modal-header">
+            <h6 class="modal-title">Rejection Reason</h6> -->
+<!-- <button type="button" class="close" data-dismiss="modal">&times;</button> -->
+<!-- </div>
+          <div class="modal-body">
+            <div class="form-group">
+              <label>Reason For Rejection</label>
+              <textarea class="form-control" rows="7" [formControl]="rejectionReason">
+  
+                    </textarea>
+            </div>
+            <div class="margin-top-15 text-center">
+              <button [disabled]="rejectionReason.invalid" (click)="onRejectLiveClass()" type="button"
+                class="btn btn-success" data-dismiss="modal">Save</button>
+            </div> -->
+<!-- </div>
+        </div>
+      </form>
+    </div>
+  </div> -->
